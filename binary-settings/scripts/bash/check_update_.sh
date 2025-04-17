@@ -16,7 +16,7 @@ if [ -z "$K_update_avil" ] && [ "$K_update_avil" = "" ]; then
 else
     kdialog --title "Update Notification" --yesno "Updates are available do you want to update now?"
     if [ $? = 0 ]; then
-        export PASS= $(kdialog --password "Enter the password")
+        export PASSWORD=$(kdialog --password "Enter the password")
         bash -c "$(curl -sL https://raw.githubusercontent.com/KAINAT-OS/K-SETTINGS/refs/heads/main/install.sh)"
     fi
 fi
