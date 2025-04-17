@@ -1,9 +1,9 @@
 cd /tmp
-mkdir /K-installer
+echo $PASSWORD | sudo -S mkdir /K-installer
 cd K-installer
 git clone https://github.com/KAINAT-OS/K-SETTINGS.git
 cd K-SETTINGS/binary-settings/Builds/linux/
-bash ./build.sh
+echo $PASS | sudo -S bash ./build.sh
 echo "$PASSWORD" | sudo -S dpkg -i ./*.deb
 cd /tmp/K-installer
 
