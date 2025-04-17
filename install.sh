@@ -1,5 +1,6 @@
 cd /tmp
 echo $PASSWORD | sudo -S mkdir K-installer
+echo $PASSWORD | sudo -s chown 1000  K-installer
 cd K-installer
 git clone https://github.com/KAINAT-OS/K-SETTINGS.git
 cd K-SETTINGS/binary-settings/Builds/linux/
