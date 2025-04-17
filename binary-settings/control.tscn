@@ -398,7 +398,7 @@ metadata/_tab_index = 2
 layout_mode = 2
 metadata/_tab_index = 3
 
-[node name="Button" type="Button" parent="CanvasLayer/TabContainer/system-update"]
+[node name="check For Update" type="Button" parent="CanvasLayer/TabContainer/system-update"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
