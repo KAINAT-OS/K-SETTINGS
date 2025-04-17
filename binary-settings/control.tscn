@@ -113,8 +113,8 @@ grow_vertical = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 1152.0
-offset_bottom = 647.0
+offset_right = 1146.0
+offset_bottom = 652.0
 mouse_filter = 1
 color = Color(0.117647, 0.121569, 0.192157, 1)
 

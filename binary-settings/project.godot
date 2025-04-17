@@ -22,6 +22,11 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="uid://dyad32fo2v165"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/markdownlabel/plugin.cfg")
