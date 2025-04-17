@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://cdvfsxrsrjil5"]
+
+[resource]
+Button/colors/font_color = Color(0.564706, 0.588235, 0.917647, 1)
+Button/colors/font_focus_color = Color(0.564706, 0.588235, 0.917647, 1)
+Button/colors/font_hover_color = Color(0.564706, 0.588235, 0.917647, 1)
+Label/colors/font_color = Color(0.564706, 0.588235, 0.917647, 1)
+TabContainer/colors/font_hovered_color = Color(0.69, 0.705333, 0.92, 1)
+TabContainer/colors/font_selected_color = Color(0.564706, 0.588235, 0.917647, 1)
+TabContainer/colors/font_unselected_color = Color(0.31, 0.322667, 0.5, 1)

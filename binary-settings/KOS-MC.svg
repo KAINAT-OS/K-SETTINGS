@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916666"
+   version="1.1"
+   id="svg1949"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="KOS-MC.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1951"
+     pagecolor="#3f9ded"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.9683221"
+     inkscape:cx="62.324773"
+     inkscape:cy="96.68762"
+     inkscape:window-width="1863"
+     inkscape:window-height="973"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1946">
+    <rect
+       x="123.30198"
+       y="1.3475627"
+       width="14.149408"
+       height="6.0640319"
+       id="rect2802" />
+    <rect
+       x="21.561002"
+       y="1.6844533"
+       width="11.454283"
+       height="6.0640319"
+       id="rect2796" />
+    <rect
+       x="8.0853759"
+       y="3.3689066"
+       width="16.170752"
+       height="4.042688"
+       id="rect2740" />
+    <rect
+       x="32.004613"
+       y="26.614362"
+       width="38.068645"
+       height="56.934522"
+       id="rect2734" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#008080;stroke-width:0.597694;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:50;paint-order:fill markers stroke"
+       id="rect2599"
+       width="52.857445"
+       height="53.035717"
+       x="0"
+       y="-0.17827131" />
+    <rect
+       style="fill:#9096ea;stroke-width:0.597694;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:50;paint-order:fill markers stroke"
+       id="rect2122"
+       x="48.133255"
+       y="0.089135654"
+       rx="12.920232"
+       height="52.5009" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.584655;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:50;paint-order:fill markers stroke"
+       id="rect2126"
+       width="5.7938185"
+       height="50.896465"
+       x="46.796223"
+       y="-51.253006"
+       rx="2.8969092"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.543228;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:50;paint-order:fill markers stroke"
+       id="rect2132"
+       width="53.035717"
+       height="2.4066627"
+       x="-0.089135654"
+       y="-0.089135624" />
+    <rect
+       style="fill:#ececec;stroke-width:1.21875;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:50;paint-order:fill markers stroke"
+       id="rect2352"
+       width="28.166866"
+       height="2.3175271"
+       x="1.1587647"
+       y="3.3483745e-09" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2732"
+       style="font-size:40px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:Audiowide;white-space:pre;shape-inside:url(#rect2734)" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2738"
+       style="font-size:2.66667px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:Audiowide;white-space:pre;shape-inside:url(#rect2740)"><tspan
+         x="8.0859375"
+         y="5.7726928"
+         id="tspan2843">files</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.80222087,0.35654261)"
+       id="text2794"
+       style="font-size:2.66667px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:Audiowide;white-space:pre;shape-inside:url(#rect2796)"><tspan
+         x="21.560547"
+         y="4.0871459"
+         id="tspan2845">options
+</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.26740696,0.35654261)"
+       id="text2800"
+       style="font-size:2.66667px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:Audiowide;white-space:pre;shape-inside:url(#rect2802)"><tspan
+         x="123.30273"
+         y="3.7512084"
+         id="tspan2847">12:00</tspan></text>
+  </g>
+</svg>

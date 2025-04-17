@@ -1,0 +1,417 @@
+[gd_scene load_steps=35 format=3 uid="uid://hx0isfv0n48r"]
+
+[ext_resource type="Script" uid="uid://74y66ymbnod3" path="res://button.gd" id="1_0fbet"]
+[ext_resource type="Theme" uid="uid://cdvfsxrsrjil5" path="res://Binary.tres" id="1_kbped"]
+[ext_resource type="Script" uid="uid://di62fyjvwsjvi" path="res://mouse.gd" id="1_qtu10"]
+[ext_resource type="Script" uid="uid://dc3p8xc4dc27y" path="res://keyboard.gd" id="2_ee4bf"]
+[ext_resource type="Script" uid="uid://d0g84enj5jgkd" path="res://network.gd" id="3_ee4bf"]
+[ext_resource type="Texture2D" uid="uid://estdh3q01nr1" path="res://monitor.svg" id="5_fj5cn"]
+[ext_resource type="Texture2D" uid="uid://bm3irbjj43pxc" path="res://logos-and-icons/KOS-tabber.svg" id="6_0ytqx"]
+[ext_resource type="Script" uid="uid://bqbm06w87hok7" path="res://kos_tabber.gd" id="7_0ytqx"]
+[ext_resource type="Texture2D" uid="uid://dsrh4438ugb61" path="res://logos-and-icons/KOS-mc.svg" id="8_pxugv"]
+[ext_resource type="Script" uid="uid://blwu5hn6kv6pg" path="res://kos_mc.gd" id="9_0ytqx"]
+[ext_resource type="Texture2D" uid="uid://dk2rfmpaiu3uv" path="res://logos-and-icons/dos10.svg" id="10_eh0v1"]
+[ext_resource type="Script" uid="uid://cmwc0d35ap5a0" path="res://kos_dos_10.gd" id="11_am1vj"]
+[ext_resource type="Texture2D" uid="uid://dsimr04d3pf13" path="res://logos-and-icons/dos11.svg" id="12_g31lc"]
+[ext_resource type="Script" uid="uid://caep0qeqbhvd1" path="res://kos_dos_11.gd" id="13_knq72"]
+[ext_resource type="Texture2D" uid="uid://o1eq5vdivxua" path="res://logos-and-icons/KOS-unity.svg" id="14_knq72"]
+[ext_resource type="Script" uid="uid://djoqm8qnjujn0" path="res://kos_unity.gd" id="15_xvdhi"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="16_8jbwv"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="17_v61lp"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="18_dgp6r"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="19_858bn"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="20_2pj6v"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="21_w5605"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="22_87wg0"]
+[ext_resource type="Script" uid="uid://bahdwm8insy5r" path="res://dark_theme.gd" id="23_v61lp"]
+[ext_resource type="Script" uid="uid://60gg21b58yuj" path="res://light_theme.gd" id="24_dgp6r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oq4si"]
+font_size = 24
+font_color = Color(0.643137, 0.662745, 0.921569, 1)
+outline_size = 4
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m4egf"]
+font_size = 18
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xvdhi"]
+font_size = 25
+font_color = Color(0.644, 0.6624, 0.92, 1)
+outline_size = 4
+
+[sub_resource type="Resource" id="Resource_3ag6a"]
+resource_local_to_scene = true
+script = ExtResource("17_v61lp")
+font_size = 2.285
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_b3rfh"]
+resource_local_to_scene = true
+script = ExtResource("18_dgp6r")
+font_size = 1.714
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_5axgr"]
+resource_local_to_scene = true
+script = ExtResource("19_858bn")
+font_size = 1.428
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_wfgqd"]
+resource_local_to_scene = true
+script = ExtResource("20_2pj6v")
+font_size = 1.142
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_jkes7"]
+resource_local_to_scene = true
+script = ExtResource("21_w5605")
+font_size = 1.0
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_gqja0"]
+resource_local_to_scene = true
+script = ExtResource("22_87wg0")
+font_size = 0.857
+is_bold = false
+is_italic = false
+is_underlined = false
+override_font_color = false
+font_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 647.0
+mouse_filter = 1
+color = Color(0.117647, 0.121569, 0.192157, 1)
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 1148.0
+offset_bottom = 648.0
+theme = ExtResource("1_kbped")
+current_tab = 2
+
+[node name="system-settings" type="VBoxContainer" parent="CanvasLayer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/TabContainer/system-settings"]
+layout_mode = 2
+text = "simple system settings"
+label_settings = SubResource("LabelSettings_oq4si")
+horizontal_alignment = 1
+
+[node name="grid" type="GridContainer" parent="CanvasLayer/TabContainer/system-settings"]
+layout_mode = 2
+theme = ExtResource("1_kbped")
+columns = 4
+
+[node name="mouse" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "🖱️ Mouse settings"
+script = ExtResource("1_qtu10")
+
+[node name="keyboard" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "⌨️Keyboard settings"
+script = ExtResource("2_ee4bf")
+
+[node name="network" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "🌐network-management"
+script = ExtResource("3_ee4bf")
+
+[node name="display" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = " Display settings"
+icon = ExtResource("5_fj5cn")
+script = ExtResource("3_ee4bf")
+
+[node name="desktop-Layouts" type="VBoxContainer" parent="CanvasLayer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/TabContainer/desktop-Layouts"]
+layout_mode = 2
+current_tab = 1
+
+[node name="Layout" type="Control" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="warnings" type="Label" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout"]
+offset_top = 74.0
+offset_right = 1143.0
+offset_bottom = 100.0
+size_flags_vertical = 1
+text = "warning!!: all Your pinned apps will be unpinned from panels"
+label_settings = SubResource("LabelSettings_m4egf")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout"]
+offset_top = 35.0
+offset_right = 1143.0
+offset_bottom = 70.0
+size_flags_vertical = 1
+text = "Chose Your Desktop Layout"
+label_settings = SubResource("LabelSettings_xvdhi")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="grid" type="GridContainer" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout"]
+offset_top = 104.0
+offset_right = 1143.0
+offset_bottom = 616.0
+columns = 4
+
+[node name="KOS-TABBER" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS-Tabber"
+icon = ExtResource("6_0ytqx")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("7_0ytqx")
+
+[node name="KOS_MC" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS MC"
+icon = ExtResource("8_pxugv")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("9_0ytqx")
+
+[node name="KOS-dos-10" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS DOS 10"
+icon = ExtResource("10_eh0v1")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("11_am1vj")
+
+[node name="KOS-dos-11" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS DOS 11"
+icon = ExtResource("12_g31lc")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("13_knq72")
+
+[node name="KOS-Unity" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS Unity"
+icon = ExtResource("14_knq72")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("15_xvdhi")
+
+[node name="desktop-layout-info2" type="Control" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="marklable" type="RichTextLabel" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/desktop-layout-info2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -4.0
+offset_right = -17.0
+offset_bottom = 568.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=22][b]Kos-Tabber[/b][/font_size]
+[ul]This is the base and default layout of KOS.
+[/ul]
+
+This layout features a browser-like tab option.
+[ul]You can start your apps from the right panel.
+You can close your tabs on the top panel by clicking the middle mouse button.
+[/ul]
+
+[font_size=22][b]KOS MC[/b][/font_size]
+[font_size=22]This is another classic layout.[/font_size]
+[ul]It offers a clean, Mac OS-like layout.
+You get a global menu at the top bar.
+[/ul]
+
+[font_size=22][b]KOS DOS10[/b][/font_size]
+[font_size=22]The most popular layout.[/font_size]
+[ul]You know this one.
+This is a universal layout.
+[/ul]
+
+[font_size=22][b]KOS DOS 11[/b][/font_size]
+[ul]DOS11 is DOS 10 with centered icons.
+[/ul]
+
+[font_size=22][b]KOS UNITY[/b][/font_size]
+[ul]Unity desktop-like layout.[/ul]"
+script = ExtResource("16_8jbwv")
+markdown_text = "### **Kos-Tabber**
+- This is the base and default layout of KOS.
+
+This layout features a browser-like tab option.
+- You can start your apps from the right panel.
+- You can close your tabs on the top panel by clicking the middle mouse button.
+
+### **KOS MC**
+### This is another classic layout.
+- It offers a clean, Mac OS-like layout.
+- You get a global menu at the top bar.
+
+### **KOS DOS10**
+### The most popular layout.
+- You know this one.
+- This is a universal layout.
+
+###**KOS DOS 11**
+- DOS11 is DOS 10 with centered icons.
+
+### **KOS UNITY**
+- Unity desktop-like layout."
+h1 = SubResource("Resource_3ag6a")
+h2 = SubResource("Resource_b3rfh")
+h3 = SubResource("Resource_5axgr")
+h4 = SubResource("Resource_wfgqd")
+h5 = SubResource("Resource_jkes7")
+h6 = SubResource("Resource_gqja0")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
+
+[node name="theming" type="TabContainer" parent="CanvasLayer/TabContainer"]
+layout_mode = 2
+current_tab = 0
+metadata/_tab_index = 2
+
+[node name="global-theme" type="Control" parent="CanvasLayer/TabContainer/theming"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="DarkTheme" type="Button" parent="CanvasLayer/TabContainer/theming/global-theme"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12161
+anchor_top = 0.5
+anchor_right = 0.12161
+anchor_bottom = 0.5
+offset_top = -152.0
+offset_right = 439.0
+offset_bottom = 152.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.71, 0.71, 0.71, 1)
+theme_override_font_sizes/font_size = 55
+text = "🌘  DARK THEME"
+script = ExtResource("23_v61lp")
+metadata/_edit_use_anchors_ = true
+
+[node name="LightTheme" type="Button" parent="CanvasLayer/TabContainer/theming/global-theme"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.937008
+anchor_top = 0.5
+anchor_right = 0.937008
+anchor_bottom = 0.5
+offset_left = -439.0
+offset_top = -152.0
+offset_bottom = 152.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.71, 0.71, 0.71, 1)
+theme_override_font_sizes/font_size = 55
+text = "☀️ Light THEME"
+script = ExtResource("24_dgp6r")
+metadata/_edit_use_anchors_ = true
+
+[node name="color_theme" type="Control" parent="CanvasLayer/TabContainer/theming"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Control3" type="Control" parent="CanvasLayer/TabContainer/theming"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+theme = ExtResource("1_kbped")
+text = "All Settings"
+script = ExtResource("1_0fbet")
+
+[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/mouse" to="CanvasLayer/TabContainer/system-settings/grid/mouse" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/keyboard" to="CanvasLayer/TabContainer/system-settings/grid/keyboard" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/network" to="CanvasLayer/TabContainer/system-settings/grid/network" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/display" to="CanvasLayer/TabContainer/system-settings/grid/display" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-TABBER" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-TABBER" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS_MC" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS_MC" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-10" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-10" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-11" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-11" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" to="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/LightTheme" to="CanvasLayer/TabContainer/theming/global-theme/LightTheme" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
