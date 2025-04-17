@@ -1,2 +1,2 @@
 ## this one is for checking current version. for working with package manager...
-export VERSION = 1.0.1
+export VERSION = "1.0.1"
