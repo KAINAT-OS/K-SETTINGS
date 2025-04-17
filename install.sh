@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /tmp
 mkdir /K-installer
 cd K-installer
