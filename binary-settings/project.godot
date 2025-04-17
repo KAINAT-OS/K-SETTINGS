@@ -22,10 +22,6 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="uid://dyad32fo2v165"
 
-[autoload]
-
-remove_all_panels="*res://remove-panels.gd"
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/markdownlabel/plugin.cfg")
