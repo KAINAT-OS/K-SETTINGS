@@ -9,7 +9,7 @@ cd /tmp/K-installer
 
 DEST_DIR="/usr/share/binary-updater/K-SETTINGS"
 SOURCE_FILE="version.sh"
-sed -i 's/version/cversion/g' $SOURCE_FILE
+sed -i 's/VERSION/offline_version/g' $SOURCE_FILE
 # Check if directory exists
 if [ ! -d "$DEST_DIR" ]; then
     echo "Directory does not exist. Creating: $DEST_DIR"
