@@ -1,4 +1,5 @@
 cd /tmp
+
 echo $PASSWORD | sudo -S mkdir K-installer
 echo $PASSWORD | sudo -s chown 1000  K-installer
 cd K-installer
