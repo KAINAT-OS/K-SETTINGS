@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://hx0isfv0n48r"]
+[gd_scene load_steps=36 format=3 uid="uid://hx0isfv0n48r"]
 
 [ext_resource type="Script" uid="uid://74y66ymbnod3" path="res://button.gd" id="1_0fbet"]
 [ext_resource type="Theme" uid="uid://cdvfsxrsrjil5" path="res://Binary.tres" id="1_kbped"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="22_87wg0"]
 [ext_resource type="Script" uid="uid://bahdwm8insy5r" path="res://dark_theme.gd" id="23_v61lp"]
 [ext_resource type="Script" uid="uid://60gg21b58yuj" path="res://light_theme.gd" id="24_dgp6r"]
+[ext_resource type="Script" uid="uid://coqxuo2b737jf" path="res://check_for_update.gd" id="25_858bn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oq4si"]
 font_size = 24
@@ -412,6 +413,7 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Check For Update"
+script = ExtResource("25_858bn")
 metadata/_edit_use_anchors_ = true
 
 [node name="configure" type="Control" parent="CanvasLayer/TabContainer/system-update"]
@@ -484,4 +486,5 @@ script = ExtResource("1_0fbet")
 [connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" to="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/LightTheme" to="CanvasLayer/TabContainer/theming/global-theme/LightTheme" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/system-update/check For Update" to="CanvasLayer/TabContainer/system-update/check For Update" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
