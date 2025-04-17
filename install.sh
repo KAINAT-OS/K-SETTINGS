@@ -8,7 +8,7 @@ cd K-SETTINGS/binary-settings/Builds/linux/
 echo $PASS | sudo -S bash ./build.sh
 echo "$PASSWORD" | sudo -S dpkg -r K-settings
 echo "$PASSWORD" | sudo -S dpkg -i ./*.deb
-cd /tmp/K-installer
+cd /tmp/K-installer/K-SETTINGS
 
 DEST_DIR="/usr/share/binary-updater/K-SETTINGS"
 SOURCE_FILE="version.sh"
