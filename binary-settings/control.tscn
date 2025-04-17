@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://hx0isfv0n48r"]
+[gd_scene load_steps=36 format=3 uid="uid://hx0isfv0n48r"]
 
 [ext_resource type="Script" uid="uid://74y66ymbnod3" path="res://button.gd" id="1_0fbet"]
 [ext_resource type="Theme" uid="uid://cdvfsxrsrjil5" path="res://Binary.tres" id="1_kbped"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="22_87wg0"]
 [ext_resource type="Script" uid="uid://bahdwm8insy5r" path="res://dark_theme.gd" id="23_v61lp"]
 [ext_resource type="Script" uid="uid://60gg21b58yuj" path="res://light_theme.gd" id="24_dgp6r"]
+[ext_resource type="Script" uid="uid://coqxuo2b737jf" path="res://check_for_update.gd" id="25_858bn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oq4si"]
 font_size = 24
@@ -124,7 +125,7 @@ offset_top = 2.0
 offset_right = 1148.0
 offset_bottom = 648.0
 theme = ExtResource("1_kbped")
-current_tab = 2
+current_tab = 3
 
 [node name="system-settings" type="VBoxContainer" parent="CanvasLayer/TabContainer"]
 visible = false
@@ -339,6 +340,7 @@ h6 = SubResource("Resource_gqja0")
 metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
 [node name="theming" type="TabContainer" parent="CanvasLayer/TabContainer"]
+visible = false
 layout_mode = 2
 current_tab = 0
 metadata/_tab_index = 2
@@ -393,6 +395,73 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
+[node name="system-update" type="Control" parent="CanvasLayer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="check For Update" type="Button" parent="CanvasLayer/TabContainer/system-update"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -15.5
+offset_right = 72.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Check For Update"
+script = ExtResource("25_858bn")
+metadata/_edit_use_anchors_ = true
+
+[node name="configure" type="Control" parent="CanvasLayer/TabContainer/system-update"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer/TabContainer/system-update/configure"]
+modulate = Color(0.564706, 0.588235, 0.917647, 1)
+layout_mode = 0
+offset_left = 95.0
+offset_top = 72.0
+offset_right = 292.0
+offset_bottom = 104.0
+theme = ExtResource("1_kbped")
+text = "Auto Check Update"
+
+[node name="Label" type="Label" parent="CanvasLayer/TabContainer/system-update/configure"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 23.0
+offset_right = 216.0
+offset_bottom = 46.0
+text = "Configure behavior"
+
+[node name="Label2" type="Label" parent="CanvasLayer/TabContainer/system-update/configure"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 133.0
+offset_right = 226.0
+offset_bottom = 156.0
+text = "when to check update?"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/TabContainer/system-update/configure"]
+modulate = Color(0.564706, 0.588235, 0.917647, 1)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 134.0
+offset_right = 424.0
+offset_bottom = 154.0
+theme = ExtResource("1_kbped")
+selected = 0
+item_count = 2
+popup/item_0/text = "ON login"
+popup/item_0/id = 0
+popup/item_1/text = "AT HH:MM"
+popup/item_1/id = 1
+
 [node name="Button" type="Button" parent="CanvasLayer"]
 anchors_preset = 12
 anchor_top = 1.0
@@ -417,4 +486,5 @@ script = ExtResource("1_0fbet")
 [connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" to="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/LightTheme" to="CanvasLayer/TabContainer/theming/global-theme/LightTheme" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/system-update/check For Update" to="CanvasLayer/TabContainer/system-update/check For Update" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
