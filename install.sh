@@ -8,7 +8,6 @@ git clone https://github.com/KAINAT-OS/K-SETTINGS.git
 cd K-SETTINGS/binary-settings/Builds/linux/
 sed -i "s/^Version: .*/Version: $VERSION/" K-settings/DEBIAN/control
 echo $PASS | sudo -S bash ./build.sh
-echo "$PASSWORD" | sudo -S dpkg -r K-settings
 echo "$PASSWORD" | sudo -S dpkg -i ./*.deb
 cd /tmp/K-installer/K-SETTINGS
 
