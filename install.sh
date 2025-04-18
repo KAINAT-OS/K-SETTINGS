@@ -4,7 +4,9 @@ echo $PASSWORD | sudo -S mkdir K-installer
 echo $PASSWORD | sudo -s chown 1000  K-installer
 cd K-installer
 git clone https://github.com/KAINAT-OS/K-SETTINGS.git
+. K-SETTINGS/version.sh
 cd K-SETTINGS/binary-settings/Builds/linux/
+sed -i "s/^Version: .*/Version: $VERSION/" K-settings/DEBIAN/control
 echo $PASS | sudo -S bash ./build.sh
 echo "$PASSWORD" | sudo -S dpkg -r K-settings
 echo "$PASSWORD" | sudo -S dpkg -i ./*.deb
