@@ -25,8 +25,10 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           cd kainatos-packages
           git add sources
           git commit -m "Update sources from K-SETTINGS"
-          git push
+          git push https://x-access-token:${GH_TOKEN}@github.com/KAINAT-OS/Kainatos-packages.git
