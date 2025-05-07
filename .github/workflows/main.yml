@@ -28,4 +28,4 @@ jobs:
           git config --global user.name "kainatquaderee"
           git add .
           git commit -m 'Sync from K-SETTINGS'
-          git push origin main
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/KAINAT-OS/Kainatos-packages.git main
