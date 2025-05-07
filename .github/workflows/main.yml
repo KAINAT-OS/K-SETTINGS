@@ -19,16 +19,14 @@ jobs:
         run: |
           cp -r binary-settings/Builds/linux/K-settings kainatos-packages/sources/
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
       - name: Commit and push changes
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        working-directory: kainatos-packages
         run: |
           cd kainatos-packages
-          git add sources
-          git commit -m "Update sources from K-SETTINGS"
-          git push https://x-access-token:${GH_TOKEN}@github.com/KAINAT-OS/Kainatos-packages.git
+          sudo apt-get install git-lfs
+          git lfs install
+          git config --global user.email "kainatquaderee@users.noreply.github.com"
+          git config --global user.name "kainatquaderee"
+          git add .
+          git commit -m 'Sync from K-SETTINGS'
+          git push origin main
