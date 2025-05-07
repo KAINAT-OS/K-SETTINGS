@@ -18,7 +18,7 @@ jobs:
 
       - name: Copy the binary-settings/Builds/linux/K-settings folder to sources folder
         run: |
-          cp -r binary-settings/Builds/linux/K-settings kainatos-packages/sources/
+          cp -r binary-settings/Builds/linux/* kainatos-packages/sources/
 
       - name: Commit and push changes
         working-directory: kainatos-packages
