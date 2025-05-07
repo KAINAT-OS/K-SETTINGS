@@ -22,7 +22,6 @@ jobs:
       - name: Commit and push changes
         working-directory: kainatos-packages
         run: |
-          cd kainatos-packages
           sudo apt-get install git-lfs
           git lfs install
           git config --global user.email "kainatquaderee@users.noreply.github.com"
