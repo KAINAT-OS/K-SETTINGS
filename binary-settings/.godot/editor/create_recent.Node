@@ -1,5 +1,14 @@
-OptionButton
 Label
-Control
+HBoxContainer
+RichTextLabel
 Button
-CheckButton
+Control
+GridContainer
+HSlider
+TabContainer
+TabBar
+ColorRect
+MarginContainer
+ScrollContainer
+VBoxContainer
+OptionButton

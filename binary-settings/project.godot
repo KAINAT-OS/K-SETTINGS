@@ -24,7 +24,8 @@ config/icon="uid://dyad32fo2v165"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/resizable=false
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
 [editor_plugins]

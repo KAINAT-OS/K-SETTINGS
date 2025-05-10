@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://hx0isfv0n48r"]
+[gd_scene load_steps=35 format=3 uid="uid://hx0isfv0n48r"]
 
 [ext_resource type="Script" uid="uid://74y66ymbnod3" path="res://button.gd" id="1_0fbet"]
 [ext_resource type="Theme" uid="uid://cdvfsxrsrjil5" path="res://Binary.tres" id="1_kbped"]
@@ -23,9 +23,8 @@
 [ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="20_2pj6v"]
 [ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="21_w5605"]
 [ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="22_87wg0"]
-[ext_resource type="Script" uid="uid://bahdwm8insy5r" path="res://dark_theme.gd" id="23_v61lp"]
-[ext_resource type="Script" uid="uid://60gg21b58yuj" path="res://light_theme.gd" id="24_dgp6r"]
-[ext_resource type="Script" uid="uid://coqxuo2b737jf" path="res://check_for_update.gd" id="25_858bn"]
+[ext_resource type="Texture2D" uid="uid://cbkqj0qwa0c20" path="res://home.png" id="24_v61lp"]
+[ext_resource type="Script" uid="uid://cu8fpn4ti3whs" path="res://App-manager-v2.gd" id="25_dgp6r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oq4si"]
 font_size = 24
@@ -33,15 +32,6 @@ font_color = Color(0.643137, 0.662745, 0.921569, 1)
 outline_size = 4
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_m4egf"]
-font_size = 18
-font_color = Color(1, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_xvdhi"]
-font_size = 25
-font_color = Color(0.644, 0.6624, 0.92, 1)
-outline_size = 4
 
 [sub_resource type="Resource" id="Resource_3ag6a"]
 resource_local_to_scene = true
@@ -103,6 +93,15 @@ is_underlined = false
 override_font_color = false
 font_color = Color(1, 1, 1, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_m4egf"]
+font_size = 18
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xvdhi"]
+font_size = 25
+font_color = Color(0.644, 0.6624, 0.92, 1)
+outline_size = 4
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -113,58 +112,63 @@ grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 1146.0
-offset_bottom = 652.0
-mouse_filter = 1
-color = Color(0.117647, 0.121569, 0.192157, 1)
-
-[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 1148.0
-offset_bottom = 648.0
-theme = ExtResource("1_kbped")
-current_tab = 3
-
-[node name="system-settings" type="VBoxContainer" parent="CanvasLayer/TabContainer"]
+[node name="Button" type="Button" parent="CanvasLayer"]
 visible = false
-layout_mode = 2
-metadata/_tab_index = 0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+theme = ExtResource("1_kbped")
+text = "All Settings"
+script = ExtResource("1_0fbet")
 
-[node name="Label" type="Label" parent="CanvasLayer/TabContainer/system-settings"]
+[node name="system-settings" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 557.0
+offset_bottom = 2.0
+
+[node name="Label" type="Label" parent="CanvasLayer/system-settings"]
 layout_mode = 2
 text = "simple system settings"
 label_settings = SubResource("LabelSettings_oq4si")
 horizontal_alignment = 1
 
-[node name="grid" type="GridContainer" parent="CanvasLayer/TabContainer/system-settings"]
+[node name="grid" type="GridContainer" parent="CanvasLayer/system-settings"]
 layout_mode = 2
 theme = ExtResource("1_kbped")
 columns = 4
 
-[node name="mouse" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+[node name="mouse" type="Button" parent="CanvasLayer/system-settings/grid"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "🖱️ Mouse settings"
 script = ExtResource("1_qtu10")
 
-[node name="keyboard" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+[node name="keyboard" type="Button" parent="CanvasLayer/system-settings/grid"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "⌨️Keyboard settings"
 script = ExtResource("2_ee4bf")
 
-[node name="network" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+[node name="network" type="Button" parent="CanvasLayer/system-settings/grid"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "🌐network-management"
 script = ExtResource("3_ee4bf")
 
-[node name="display" type="Button" parent="CanvasLayer/TabContainer/system-settings/grid"]
+[node name="display" type="Button" parent="CanvasLayer/system-settings/grid"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -172,112 +176,36 @@ text = " Display settings"
 icon = ExtResource("5_fj5cn")
 script = ExtResource("3_ee4bf")
 
-[node name="desktop-Layouts" type="VBoxContainer" parent="CanvasLayer/TabContainer"]
+[node name="desktop-Layouts" type="VBoxContainer" parent="CanvasLayer"]
 visible = false
-layout_mode = 2
-metadata/_tab_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 5.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TabContainer" type="TabContainer" parent="CanvasLayer/TabContainer/desktop-Layouts"]
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/desktop-Layouts"]
 layout_mode = 2
-current_tab = 1
+current_tab = 0
 
-[node name="Layout" type="Control" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer"]
-visible = false
+[node name="desktop-layout-info2" type="Control" parent="CanvasLayer/desktop-Layouts/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="warnings" type="Label" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout"]
-layout_mode = 0
-offset_top = 74.0
-offset_right = 1143.0
-offset_bottom = 100.0
-size_flags_vertical = 1
-text = "warning!!: all Your pinned apps will be unpinned from panels"
-label_settings = SubResource("LabelSettings_m4egf")
-horizontal_alignment = 1
-uppercase = true
-
-[node name="Label" type="Label" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout"]
-layout_mode = 0
-offset_top = 35.0
-offset_right = 1143.0
-offset_bottom = 70.0
-size_flags_vertical = 1
-text = "Chose Your Desktop Layout"
-label_settings = SubResource("LabelSettings_xvdhi")
-horizontal_alignment = 1
-uppercase = true
-
-[node name="grid" type="GridContainer" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout"]
-layout_mode = 0
-offset_top = 104.0
-offset_right = 1143.0
-offset_bottom = 616.0
-columns = 4
-
-[node name="KOS-TABBER" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "KOS-Tabber"
-icon = ExtResource("6_0ytqx")
-icon_alignment = 1
-vertical_icon_alignment = 0
-script = ExtResource("7_0ytqx")
-
-[node name="KOS_MC" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "KOS MC"
-icon = ExtResource("8_pxugv")
-icon_alignment = 1
-vertical_icon_alignment = 0
-script = ExtResource("9_0ytqx")
-
-[node name="KOS-dos-10" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "KOS DOS 10"
-icon = ExtResource("10_eh0v1")
-icon_alignment = 1
-vertical_icon_alignment = 0
-script = ExtResource("11_am1vj")
-
-[node name="KOS-dos-11" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "KOS DOS 11"
-icon = ExtResource("12_g31lc")
-icon_alignment = 1
-vertical_icon_alignment = 0
-script = ExtResource("13_knq72")
-
-[node name="KOS-Unity" type="Button" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "KOS Unity"
-icon = ExtResource("14_knq72")
-icon_alignment = 1
-vertical_icon_alignment = 0
-script = ExtResource("15_xvdhi")
-
-[node name="desktop-layout-info2" type="Control" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer"]
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="marklable" type="RichTextLabel" parent="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/desktop-layout-info2"]
+[node name="marklable" type="RichTextLabel" parent="CanvasLayer/desktop-Layouts/TabContainer/desktop-layout-info2"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -4.0
-offset_right = -17.0
-offset_bottom = 568.0
+offset_left = 49.0
+offset_top = -2.0
+offset_right = 33.0
+offset_bottom = 570.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
@@ -339,152 +267,195 @@ h5 = SubResource("Resource_jkes7")
 h6 = SubResource("Resource_gqja0")
 metadata/_custom_type_script = "uid://dbap0gqox0ty1"
 
-[node name="theming" type="TabContainer" parent="CanvasLayer/TabContainer"]
+[node name="Layout" type="Control" parent="CanvasLayer/desktop-Layouts"]
 visible = false
 layout_mode = 2
-current_tab = 0
-metadata/_tab_index = 2
 
-[node name="global-theme" type="Control" parent="CanvasLayer/TabContainer/theming"]
+[node name="warnings" type="Label" parent="CanvasLayer/desktop-Layouts/Layout"]
+layout_mode = 0
+offset_top = 74.0
+offset_right = 1143.0
+offset_bottom = 100.0
+size_flags_vertical = 1
+text = "warning!!: all Your pinned apps will be unpinned from panels"
+label_settings = SubResource("LabelSettings_m4egf")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Label" type="Label" parent="CanvasLayer/desktop-Layouts/Layout"]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 1143.0
+offset_bottom = 70.0
+size_flags_vertical = 1
+text = "Chose Your Desktop Layout"
+label_settings = SubResource("LabelSettings_xvdhi")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="grid" type="GridContainer" parent="CanvasLayer/desktop-Layouts/Layout"]
+layout_mode = 0
+offset_top = 104.0
+offset_right = 1143.0
+offset_bottom = 616.0
+columns = 4
+
+[node name="KOS-TABBER" type="Button" parent="CanvasLayer/desktop-Layouts/Layout/grid"]
 layout_mode = 2
-metadata/_tab_index = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS-Tabber"
+icon = ExtResource("6_0ytqx")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("7_0ytqx")
 
-[node name="DarkTheme" type="Button" parent="CanvasLayer/TabContainer/theming/global-theme"]
-clip_children = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.12161
+[node name="KOS_MC" type="Button" parent="CanvasLayer/desktop-Layouts/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS MC"
+icon = ExtResource("8_pxugv")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("9_0ytqx")
+
+[node name="KOS-dos-10" type="Button" parent="CanvasLayer/desktop-Layouts/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS DOS 10"
+icon = ExtResource("10_eh0v1")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("11_am1vj")
+
+[node name="KOS-dos-11" type="Button" parent="CanvasLayer/desktop-Layouts/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS DOS 11"
+icon = ExtResource("12_g31lc")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("13_knq72")
+
+[node name="KOS-Unity" type="Button" parent="CanvasLayer/desktop-Layouts/Layout/grid"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "KOS Unity"
+icon = ExtResource("14_knq72")
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("15_xvdhi")
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.12161
 anchor_bottom = 0.5
-offset_top = -152.0
-offset_right = 439.0
-offset_bottom = 152.0
+offset_left = 2.0
+offset_top = -260.0
+offset_right = 281.0
+offset_bottom = 289.0
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.71, 0.71, 0.71, 1)
-theme_override_font_sizes/font_size = 55
-text = "🌘  DARK THEME"
-script = ExtResource("23_v61lp")
-metadata/_edit_use_anchors_ = true
 
-[node name="LightTheme" type="Button" parent="CanvasLayer/TabContainer/theming/global-theme"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.937008
-anchor_top = 0.5
-anchor_right = 0.937008
-anchor_bottom = 0.5
-offset_left = -439.0
-offset_top = -152.0
-offset_bottom = 152.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.71, 0.71, 0.71, 1)
-theme_override_font_sizes/font_size = 55
-text = "☀️ Light THEME"
-script = ExtResource("24_dgp6r")
-metadata/_edit_use_anchors_ = true
-
-[node name="color_theme" type="Control" parent="CanvasLayer/TabContainer/theming"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="Control3" type="Control" parent="CanvasLayer/TabContainer/theming"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 2
-
-[node name="system-update" type="Control" parent="CanvasLayer/TabContainer"]
-layout_mode = 2
-metadata/_tab_index = 3
-
-[node name="check For Update" type="Button" parent="CanvasLayer/TabContainer/system-update"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -72.5
-offset_top = -15.5
-offset_right = 72.5
-offset_bottom = 15.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -11.0
+offset_right = 6.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Check For Update"
-script = ExtResource("25_858bn")
+
+[node name="input-settings" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Input settings
+"
 metadata/_edit_use_anchors_ = true
 
-[node name="configure" type="Control" parent="CanvasLayer/TabContainer/system-update"]
-anchors_preset = 0
+[node name="personalization" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "personalization
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Apps" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Apps"
+metadata/_edit_use_anchors_ = true
+
+[node name="Update" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Update
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Recovery and reset" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Recovery and reset"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_right = 984.0
+offset_bottom = 53.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel2"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CheckButton" type="CheckButton" parent="CanvasLayer/TabContainer/system-update/configure"]
-modulate = Color(0.564706, 0.588235, 0.917647, 1)
-layout_mode = 0
-offset_left = 95.0
-offset_top = 72.0
-offset_right = 292.0
-offset_bottom = 104.0
-theme = ExtResource("1_kbped")
-text = "Auto Check Update"
+[node name="Home" type="Button" parent="CanvasLayer/Panel2/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("24_v61lp")
+icon_alignment = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/TabContainer/system-update/configure"]
-layout_mode = 0
-offset_left = 67.0
-offset_top = 23.0
-offset_right = 216.0
-offset_bottom = 46.0
-text = "Configure behavior"
-
-[node name="Label2" type="Label" parent="CanvasLayer/TabContainer/system-update/configure"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 133.0
-offset_right = 226.0
-offset_bottom = 156.0
-text = "when to check update?"
-
-[node name="OptionButton" type="OptionButton" parent="CanvasLayer/TabContainer/system-update/configure"]
-modulate = Color(0.564706, 0.588235, 0.917647, 1)
-layout_mode = 0
-offset_left = 259.0
-offset_top = 134.0
-offset_right = 424.0
-offset_bottom = 154.0
-theme = ExtResource("1_kbped")
-selected = 0
-item_count = 2
-popup/item_0/text = "ON login"
-popup/item_0/id = 0
-popup/item_1/text = "AT HH:MM"
-popup/item_1/id = 1
-
-[node name="Button" type="Button" parent="CanvasLayer"]
-anchors_preset = 12
-anchor_top = 1.0
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -31.0
 grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 0
-theme = ExtResource("1_kbped")
-text = "All Settings"
-script = ExtResource("1_0fbet")
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.117235, 0.121141, 0.191974, 1)
 
-[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/mouse" to="CanvasLayer/TabContainer/system-settings/grid/mouse" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/keyboard" to="CanvasLayer/TabContainer/system-settings/grid/keyboard" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/network" to="CanvasLayer/TabContainer/system-settings/grid/network" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/system-settings/grid/display" to="CanvasLayer/TabContainer/system-settings/grid/display" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-TABBER" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-TABBER" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS_MC" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS_MC" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-10" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-10" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-11" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-dos-11" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" to="CanvasLayer/TabContainer/desktop-Layouts/TabContainer/Layout/grid/KOS-Unity" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" to="CanvasLayer/TabContainer/theming/global-theme/DarkTheme" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/theming/global-theme/LightTheme" to="CanvasLayer/TabContainer/theming/global-theme/LightTheme" method="_on_pressed"]
-[connection signal="pressed" from="CanvasLayer/TabContainer/system-update/check For Update" to="CanvasLayer/TabContainer/system-update/check For Update" method="_on_pressed"]
+[node name="Apps-manager" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 0.0864198
+anchor_right = 0.853299
+anchor_bottom = 0.936728
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("25_dgp6r")
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Apps-manager"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Apps-manager/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/system-settings/grid/mouse" to="CanvasLayer/system-settings/grid/mouse" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/system-settings/grid/keyboard" to="CanvasLayer/system-settings/grid/keyboard" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/system-settings/grid/network" to="CanvasLayer/system-settings/grid/network" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/system-settings/grid/display" to="CanvasLayer/system-settings/grid/display" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/desktop-Layouts/Layout/grid/KOS-TABBER" to="CanvasLayer/desktop-Layouts/Layout/grid/KOS-TABBER" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/desktop-Layouts/Layout/grid/KOS_MC" to="CanvasLayer/desktop-Layouts/Layout/grid/KOS_MC" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/desktop-Layouts/Layout/grid/KOS-dos-10" to="CanvasLayer/desktop-Layouts/Layout/grid/KOS-dos-10" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/desktop-Layouts/Layout/grid/KOS-dos-11" to="CanvasLayer/desktop-Layouts/Layout/grid/KOS-dos-11" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/desktop-Layouts/Layout/grid/KOS-Unity" to="CanvasLayer/desktop-Layouts/Layout/grid/KOS-Unity" method="_on_pressed"]

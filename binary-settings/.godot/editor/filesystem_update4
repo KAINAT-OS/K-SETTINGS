@@ -1,2 +1,17 @@
 res://control.tscn
 res://Binary.tres
+res://apps.gd
+res://main.tscn
+res://PANEL-MANAGER.gd
+res://appV2.gd
+res://display-control.gd
+res://Display-control.gd
+res://display-control-v2.gd
+res://mouse.gd
+res://mouse_settings.gd
+res://keyboard_settings.gd
+res://gamepad_settings.gd
+res://btn_touchpad.gd
+res://advance-display.gd
+res://default_apps.gd
+res://appv3.gd
