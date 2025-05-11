@@ -63,7 +63,11 @@ func _build_ui_list() -> void:
 
 		# App Name Button (shows plain name)
 		var name_button = Button.new()
-		name_button.text = app.id.replace(".desktop", "")
+		var pkg=[]
+		var arg_c="grep '^Name='"+" "+ app.desktop_file
+		OS.execute("bash",["-c",arg_c],pkg)
+		pkg=pkg[0].split("=")
+		name_button.text = pkg[1]
 		name_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		name_button.flat = true
 		name_button.connect("pressed", Callable(self, "_on_app_clicked").bind(app))
