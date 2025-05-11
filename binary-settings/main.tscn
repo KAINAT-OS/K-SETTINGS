@@ -60,11 +60,12 @@ grow_vertical = 2
 
 [node name="main-panel" type="PanelContainer" parent="."]
 self_modulate = Color(0, 0, 0, 1)
-layout_mode = 2
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 1102.0
-offset_bottom = 598.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="main-panel"]
 unique_name_in_owner = true
@@ -302,9 +303,11 @@ size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="main-panel/ColorRect/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = -1
+anchor_left = 0.34375
+anchor_top = 0.0394265
+anchor_right = 0.34375
+anchor_bottom = 0.0860215
 offset_left = -242.0
 offset_right = 242.0
 offset_bottom = 23.0
@@ -312,6 +315,7 @@ grow_horizontal = 2
 text = "Here are some basic display settings:
 Choose your display and resolution."
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="all settings" type="Button" parent="main-panel/ColorRect/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
 layout_mode = 1
@@ -753,6 +757,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="UPDATE" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 modulate = Color(0.61, 0.6295, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -840,10 +845,10 @@ text = "Kainat OS Release branch"
 [node name="OptionButton" type="OptionButton" parent="main-panel/ColorRect/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.263636
-anchor_top = 0.486784
-anchor_right = 0.263636
-anchor_bottom = 0.486784
+anchor_left = 0.137731
+anchor_top = 0.554152
+anchor_right = 0.137731
+anchor_bottom = 0.554152
 offset_top = -15.5
 offset_right = 97.0
 offset_bottom = 15.5
@@ -890,7 +895,7 @@ metadata/_edit_use_anchors_ = true
 [node name="PERSONALIZATION" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 visible = false
-self_modulate = Color(0.61, 0.6295, 1, 1)
+modulate = Color(0.611765, 0.631373, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -1169,6 +1174,7 @@ icon = ExtResource("29_htxhm")
 [node name="Network" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 visible = false
+modulate = Color(0.611765, 0.631373, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -1223,7 +1229,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="About" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
+modulate = Color(0.611765, 0.631373, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -1282,11 +1288,12 @@ text = "more Info"
 metadata/_edit_use_anchors_ = true
 
 [node name="settings app always dark" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchor_left = 0.791667
-anchor_top = 0.111111
+anchor_top = 0.0370369
 anchor_right = 0.791667
-anchor_bottom = 0.111111
+anchor_bottom = 0.0370369
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 

@@ -44,7 +44,7 @@ func show_panel(panel_to_show:PanelContainer) -> void:
 	panel_to_show.show()
 	
 func _process(delta):
-	get_system_theme()
+	pass
 	
 func get_system_theme() -> void:
 	var theme_raw :=[]

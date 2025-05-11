@@ -79,7 +79,6 @@ func _apply_settings() -> void:
 	DisplayServer.window_set_current_screen(monitor_index)
 
 	# Resize the window to the chosen resolution
-	DisplayServer.window_set_size(res)
 	#getting the monitor name
 
 	# Change window mode
