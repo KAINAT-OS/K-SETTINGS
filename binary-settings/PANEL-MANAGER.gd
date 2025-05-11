@@ -6,23 +6,123 @@ var panels: Array[PanelContainer]=[]
 @onready var apps: Button = %Apps
 @onready var update: Button = %Update
 @onready var personalization: Button = %personalization
-@onready var button_6: Button = %Button6
-@onready var button_7: Button = %Button7
+@onready var btn_User: Button = %btn_Users
 @onready var button_8: Button = %Button8
 @onready var button_9: Button = %Button9
 @onready var button_10: Button = %Button10
+@onready var color_rect: ColorRect = %ColorRect
+@onready var settings_panel: PanelContainer = %settings_panel
+@onready var sa_dark: CheckButton = %sa_dark
+@onready var labelx: Label = %Labeld
+@onready var btn_language_and_locals: Button = %btn_Language_And_Locals
 
+var dark_mod_col="9ca1ff"
+var light_mod_col="2f304d"
+var self_light_mod_col="ffffff7f"
 
 func _ready() -> void:
-	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION]
+	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About]
 	
 	display.pressed.connect(show_panel.bind(panels[0]))
 	input.pressed.connect(show_panel.bind(panels[1]))
 	apps.pressed.connect(show_panel.bind(panels[2]))
 	update.pressed.connect(show_panel.bind(panels[3]))
 	personalization.pressed.connect(show_panel.bind(panels[4]))
+	btn_language_and_locals.pressed.connect(show_panel.bind(panels[5]))
+	button_8.pressed.connect(show_panel.bind(panels[6]))
+	button_9.pressed.connect(show_panel.bind(panels[7]))
 	show_panel(panels[0])
+	sa_dark.connect("toggled", Callable(self,"save_variable"))
+	btn_User.connect("pressed", Callable(self,"open_users"))
+	load_variable()
+
 func show_panel(panel_to_show:PanelContainer) -> void:
+	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About]
+
 	for panel in panels:
 		panel.hide()
 	panel_to_show.show()
+	
+func _process(delta):
+	get_system_theme()
+	
+func get_system_theme() -> void:
+	var theme_raw :=[]
+	OS.execute("kreadconfig5",["--key","LookAndFeelPackage"],theme_raw)
+	var theme = theme_raw[0]
+	if "light" in theme and  not sa_dark.button_pressed :
+		light_theme()
+	else:
+		dark_theme()
+	
+
+	
+func light_theme() -> void:
+	
+	for panel in panels:
+		panel.set_modulate(Color(light_mod_col))
+		panel.set_self_modulate(Color(self_light_mod_col))
+	color_rect.set_color(Color("ffffff"))
+	settings_panel.set_modulate(Color(light_mod_col))
+	settings_panel.set_self_modulate(Color(self_light_mod_col))
+	labelx.add_theme_color_override("font_color",Color(0,0,0,1))
+
+func dark_theme() -> void:
+	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About]
+	for panel in panels:
+		panel.set_modulate(Color(dark_mod_col))
+		panel.set_self_modulate(Color(1,1,1,1))
+	color_rect.set_color(Color("08080d"))
+	settings_panel.set_modulate(Color(dark_mod_col))
+	settings_panel.set_self_modulate(Color(1,1,1,1))
+	labelx.add_theme_color_override("font_color",Color(1,1,1,1))
+
+
+
+func save_variable():
+	var config = ConfigFile.new()
+	config.set_value("defaults", "always_dark", sa_dark.button_pressed)
+	var error = config.save("user://save_data.cfg")
+	if error != OK:
+		print("Failed to save config file: ", error)
+	print ("saved")
+		
+		
+		
+func load_variable():
+	var config = ConfigFile.new()
+	var error = config.load("user://save_data.cfg")
+	if error != OK:
+		print("Failed to load config file: ", error)
+		return
+	var always_dark = config.get_value("default", "always_dark", true)
+	print("Loaded:", always_dark)
+
+
+func open_users() -> void:
+	OS.execute("kcmshell5",["kcm_users"])
+
+func connections() -> void:
+	OS.execute("kcmshell5",["kcm_users"])
+
+
+func _on_connections_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_networkmanagement"])
+
+
+func _on_connections_2_pressed() -> void:
+	OS.execute("kcmshell5",["proxy"])
+
+
+func _on_about_text_ready() -> void:
+	var about_os = []
+	OS.execute("cat",["/usr/lib/os-release"],about_os)
+	%about_text.add_text(about_os[0])
+
+
+func _on_btn_fullabout_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_about-distro"])
+
+
+func _on_button_10_pressed() -> void:
+	OS.execute("systemsettings5",[])
