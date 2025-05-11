@@ -1,0 +1,2 @@
+*.exec filter=lfs diff=lfs merge=lfs -text
+/media/kainatq/GAMES_AND_OTHERS/kainat-os/K-SETTINGS/binary-settings/Builds/linux/K-settings/usr/bin/kainat-settings.x86_64 filter=lfs diff=lfs merge=lfs -text
