@@ -131,3 +131,46 @@ func _on_uninstall_pressed(app_data: Dictionary) -> void:
 		_refresh_app_list()
 	else:
 		print("Could not determine package for %s" % desktop_path)
+
+
+
+
+
+
+func filter_app_list(key:String) -> void:
+	installed_apps = []
+	app_icons.clear()
+
+	var dir = DirAccess.open(desktop_dir)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if file_name.ends_with(".desktop"):
+				var pkg=[]
+				var arg_c="grep '^Name='"+" "+ desktop_dir+"/"+file_name
+				OS.execute("bash",["-c",arg_c],pkg)
+				pkg=pkg[0].split("=")[1]
+				if pkg.contains(key):
+					var app_id: String = file_name
+					installed_apps.append({
+						"id": app_id,
+						"desktop_file": desktop_dir + "/" + file_name
+					})
+			file_name = dir.get_next()
+
+	# After collecting desktop files, fetch their icons
+	for app in installed_apps:
+		app_icons[app.id] = _read_icon_name(app.desktop_file)
+
+	_build_ui_list()
+
+
+
+
+
+func _on_search_app_text_changed() -> void:
+	if %search_app.text == "":
+		_refresh_app_list()
+	else:
+		filter_app_list(%search_app.text)

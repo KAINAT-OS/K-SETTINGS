@@ -1,12 +1,12 @@
+Control
+TextEdit
 Label
 VBoxContainer
 MarginContainer
 GridContainer
 Button
 TabContainer
-Control
 RichTextLabel
-EmojiIcon
 PanelContainer
 HBoxContainer
 CheckButton

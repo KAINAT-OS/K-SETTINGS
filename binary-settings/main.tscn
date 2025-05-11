@@ -641,7 +641,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="APPS" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 modulate = Color(0.611765, 0.631373, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -684,6 +683,23 @@ theme_override_constants/margin_top = 60
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
+[node name="Control" type="Control" parent="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="search_app" type="TextEdit" parent="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.115741
+anchor_top = -0.100244
+anchor_right = 0.575231
+anchor_bottom = -0.0317848
+offset_bottom = 8.0
+grow_horizontal = 2
+placeholder_text = "search Apps"
+metadata/_edit_use_anchors_ = true
+
 [node name="HBoxContainer" type="HBoxContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control/MarginContainer"]
 layout_mode = 2
 
@@ -711,10 +727,10 @@ anchor_left = 0.037
 anchor_top = 0.036
 anchor_right = 0.037
 anchor_bottom = 0.036
-offset_left = -0.0400009
-offset_top = 0.0719986
-offset_right = 135.96
-offset_bottom = 31.072
+offset_left = 13.552
+offset_top = 8.472
+offset_right = 149.552
+offset_bottom = 39.472
 tooltip_text = "Set your default apps like browser mail etc"
 text = "Set Default Apps"
 script = ExtResource("14_w48qg")
@@ -738,10 +754,10 @@ metadata/_edit_use_anchors_ = true
 [node name="info_label2" type="Label" parent="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.181522
-anchor_top = 0.0813253
-anchor_right = 0.553261
-anchor_bottom = 0.185743
+anchor_left = 0.390487
+anchor_top = 0.0342809
+anchor_right = 0.762226
+anchor_bottom = 0.138699
 offset_left = -127.0
 offset_top = -11.5
 offset_bottom = 11.5
@@ -1229,6 +1245,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="About" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 modulate = Color(0.611765, 0.631373, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1324,6 +1341,7 @@ layout_mode = 2
 [connection signal="pressed" from="main-panel/ColorRect/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/btn_printer" to="main-panel/ColorRect/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/btn_printer" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/ColorRect/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/btn_audio" to="main-panel/ColorRect/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/btn_audio" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/ColorRect/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/btn_kde-connect" to="main-panel/ColorRect/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/btn_kde-connect" method="_on_pressed"]
+[connection signal="text_changed" from="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/Control/search_app" to="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control" method="_on_search_app_text_changed"]
 [connection signal="pressed" from="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control/default_apps" to="main-panel/ColorRect/MarginContainer/HBoxContainer/APPS/Control/default_apps" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/ColorRect/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" to="main-panel/ColorRect/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/ColorRect/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/configure automatic Update" to="main-panel/ColorRect/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/configure automatic Update" method="_on_pressed"]
