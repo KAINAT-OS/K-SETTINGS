@@ -1,6 +1,3 @@
-res://main.tscn
-res://Binary.tres
-res://addons/emojis-for-godot/emojis/emojis.gd
 res://control.tscn
-res://PANEL-MANAGER.gd
-res://connections.gd
+res://Binary.tres
+res://main.tscn

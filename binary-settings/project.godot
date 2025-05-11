@@ -24,10 +24,6 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="uid://ct1yvg0h2p4io"
 
-[autoload]
-
-EmojisDB="*res://addons/emojis-for-godot/emojis/emojis.gd"
-
 [display]
 
 window/size/resizable=false
@@ -36,7 +32,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/emojis-for-godot/plugin.cfg", "res://addons/markdownlabel/plugin.cfg")
+enabled=PackedStringArray("res://addons/markdownlabel/plugin.cfg")
 
 [rendering]
 
