@@ -76,6 +76,7 @@ layout_mode = 2
 [node name="dark-color" type="ColorRect" parent="main-panel"]
 unique_name_in_owner = true
 layout_mode = 2
+color = Color(0.117235, 0.121141, 0.191974, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="main-panel"]
 layout_mode = 2
