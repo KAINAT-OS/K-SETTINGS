@@ -1370,5 +1370,6 @@ layout_mode = 2
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Network/Control/Connections2" to="main-panel/MarginContainer" method="_on_connections_2_pressed"]
 [connection signal="ready" from="main-panel/MarginContainer/HBoxContainer/About/Control/MarginContainer/about_text" to="main-panel/MarginContainer" method="_on_about_text_ready"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/About/Control/btn_fullabout" to="main-panel/MarginContainer" method="_on_btn_fullabout_pressed"]
+[connection signal="gui_input" from="header" to="header" method="_on_gui_input"]
 [connection signal="pressed" from="header/cross" to="header" method="_on_cross_pressed"]
 [connection signal="pressed" from="header/minimize" to="header" method="_on_minimize_pressed"]
