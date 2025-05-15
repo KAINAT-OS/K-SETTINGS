@@ -16,9 +16,9 @@ var panels: Array[PanelContainer]=[]
 @onready var labelx: Label = %Labeld
 @onready var btn_language_and_locals: Button = %btn_Language_And_Locals
 
-var dark_mod_col="9ca1ff"
-var light_mod_col="2f304d"
-var self_light_mod_col="ffffff7f"
+var darktheme=load("res://dark_theme.tres")
+var lighttheme=load("res://light_theme.tres")
+
 
 func _ready() -> void:
 	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About]
@@ -44,7 +44,7 @@ func show_panel(panel_to_show:PanelContainer) -> void:
 	panel_to_show.show()
 	
 func _process(delta):
-	pass
+	get_system_theme()
 	
 func get_system_theme() -> void:
 	var theme_raw :=[]
@@ -58,24 +58,14 @@ func get_system_theme() -> void:
 
 	
 func light_theme() -> void:
-	
-	for panel in panels:
-		panel.set_modulate(Color(light_mod_col))
-		panel.set_self_modulate(Color(self_light_mod_col))
-	color_rect.set_color(Color("ffffff"))
-	settings_panel.set_modulate(Color(light_mod_col))
-	settings_panel.set_self_modulate(Color(self_light_mod_col))
-	labelx.add_theme_color_override("font_color",Color(0,0,0,1))
+	$"../../..".set_theme(lighttheme)
+	%"light-color".show()
+	%"dark-color".hide()
 
 func dark_theme() -> void:
-	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About]
-	for panel in panels:
-		panel.set_modulate(Color(dark_mod_col))
-		panel.set_self_modulate(Color(1,1,1,1))
-	color_rect.set_color(Color("08080d"))
-	settings_panel.set_modulate(Color(dark_mod_col))
-	settings_panel.set_self_modulate(Color(1,1,1,1))
-	labelx.add_theme_color_override("font_color",Color(1,1,1,1))
+	$"../../..".set_theme(darktheme)
+	%"light-color".hide()
+	%"dark-color".show()
 
 
 

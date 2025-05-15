@@ -1,14 +1,14 @@
+Button
+Panel
 Control
 TextEdit
 Label
 VBoxContainer
 MarginContainer
 GridContainer
-Button
 TabContainer
 RichTextLabel
 PanelContainer
 HBoxContainer
 CheckButton
 HSlider
-OptionButton

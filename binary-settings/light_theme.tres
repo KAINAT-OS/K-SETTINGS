@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://8wrn8sfx1gvr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkwqb"]
+bg_color = Color(0.74978, 0.74978, 0.74978, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bny6"]
+bg_color = Color(0.117235, 0.121141, 0.191974, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86ju1"]
+bg_color = Color(0.907942, 0.907942, 0.907942, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p36p5"]
+bg_color = Color(0.886262, 0.886261, 0.886262, 1)
+
+[resource]
+Button/colors/font_color = Color(0.117235, 0.121141, 0.191974, 1)
+Button/colors/font_focus_color = Color(0.117235, 0.121141, 0.191974, 1)
+Button/colors/font_hover_color = Color(0.7047, 0.709965, 0.81, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_hkwqb")
+Label/colors/font_color = Color(0.117235, 0.121141, 0.191974, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_4bny6")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_86ju1")
+RichTextLabel/colors/default_color = Color(0.117235, 0.121141, 0.191974, 1)
+TabContainer/styles/panel = SubResource("StyleBoxFlat_p36p5")

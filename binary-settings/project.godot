@@ -13,7 +13,7 @@ config_version=5
 config/name="Simple-settings"
 config/description="System settings app for KainatOS and Binary OS"
 config/version="1.0.0"
-run/main_scene="uid://b3cp1f0rtwjh"
+run/main_scene="uid://cxxp1b6n8kekh"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="kainat-settingss"
 config/features=PackedStringArray("4.4", "GL Compatibility")
@@ -27,7 +27,7 @@ config/icon="uid://l5ixaki8qupn"
 [display]
 
 window/size/resizable=false
-window/stretch/mode="viewport"
+window/size/borderless=true
 window/vsync/vsync_mode=0
 
 [editor_plugins]
