@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cxxp1b6n8kekh"]
+[gd_scene load_steps=52 format=3 uid="uid://cxxp1b6n8kekh"]
 
 [ext_resource type="Texture2D" uid="uid://djf2713oc0vqh" path="res://logos-and-icons/window-close.svg" id="1_2xwyl"]
 [ext_resource type="Script" uid="uid://0gccktbcfwmh" path="res://PANEL-MANAGER.gd" id="1_hl0yf"]
@@ -51,7 +51,6 @@
 [ext_resource type="Texture2D" uid="uid://cmnipubex0cyb" path="res://tools-check-spelling.png" id="47_epjfw"]
 [ext_resource type="Texture2D" uid="uid://c5owytqj4ipgs" path="res://yast-timezone.svg" id="48_cpg8b"]
 [ext_resource type="Texture2D" uid="uid://ckqm8n1xn46ns" path="res://proxy.png" id="49_xryqn"]
-[ext_resource type="Script" uid="uid://bpfjuoyogibqy" path="res://header.gd" id="51_fw7gh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -1295,11 +1294,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="header" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1151.0
+offset_right = 1152.0
 offset_bottom = 50.0
-script = ExtResource("51_fw7gh")
 
 [node name="cross" type="Button" parent="header"]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -1310,6 +1309,7 @@ grow_horizontal = 0
 icon = ExtResource("1_2xwyl")
 
 [node name="minimize" type="Button" parent="header"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.95656

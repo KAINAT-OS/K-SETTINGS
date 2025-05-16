@@ -27,7 +27,6 @@ config/icon="uid://l5ixaki8qupn"
 [display]
 
 window/size/resizable=false
-window/size/borderless=true
 window/vsync/vsync_mode=0
 
 [editor_plugins]
