@@ -1510,7 +1510,7 @@ cache/0/32/0/glyphs/54/size = Vector2(18, 25)
 cache/0/32/0/glyphs/54/uv_rect = Rect2(47, 1, 18, 25)
 cache/0/32/0/glyphs/54/texture_idx = 0
 
-[sub_resource type="Image" id="Image_3wvh3"]
+[sub_resource type="Image" id="Image_4odht"]
 data = {
 "data": PackedByteArray("sbGxALGxsQCxsbEAsbGxALGxsQCxsbEAsbGxALGxsQCxsbEAsbGxALKysgCysrIAsbGxALGxsQCxsbEAsbGxALGxsQCxsbEAsbGxALGxsQCxsbEAsbGxALKysgCysrIAsbGxALGxsQCxsbEAsbGxALGxsQCysrIAsrKyALGxsQCxsbEAsbGxALKysgCysrIAsbGxALGxsZmxsbGmsbGxErKysgCysrIAsrKyALKysgCxsbESsbGxprKyspeysrIAsbGxALGxsaaysrLZsrKysrKyshKysrIAsrKyALKyshKysrKzsrKy2bKysqWysrIAsbGxALGxsRKysrKysrKy2bKysrKysrISsrKyErKysrOysrLZsrKysrKyshGysrIAsbGxALKysgCysrISsrKysrKystmysrLFsrKyxbKystmysrKysrKyEbKysgCysrIAsrKyALKysgCysrIAsrKyErKysrKysrLZsrKy2bKysrKysrIRsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKyshKysrKlsrKypbKyshGysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIAsrKyALKysgCysrIA"),
 "format": "RGBA8",
@@ -1520,7 +1520,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_41iwb"]
-image = SubResource("Image_3wvh3")
+image = SubResource("Image_4odht")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgkdc"]
 bg_color = Color(0.117235, 0.121141, 0.191974, 1)
@@ -1532,6 +1532,8 @@ bg_color = Color(0.046891, 0.046891, 0.0742504, 1)
 bg_color = Color(0.046891, 0.046891, 0.0742504, 1)
 
 [resource]
+Button/colors/icon_hover_color = Color(0.258915, 0.772824, 0.968734, 1)
+Button/colors/icon_normal_color = Color(0.61, 0.6295, 1, 1)
 Button/styles/focus = SubResource("StyleBoxFlat_0wx3w")
 Button/styles/hover = SubResource("StyleBoxFlat_oaqtb")
 Button/styles/normal = SubResource("StyleBoxFlat_3luov")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cxxp1b6n8kekh"]
+[gd_scene load_steps=53 format=3 uid="uid://cxxp1b6n8kekh"]
 
 [ext_resource type="Texture2D" uid="uid://djf2713oc0vqh" path="res://logos-and-icons/window-close.svg" id="1_2xwyl"]
 [ext_resource type="Script" uid="uid://0gccktbcfwmh" path="res://PANEL-MANAGER.gd" id="1_hl0yf"]
@@ -51,6 +51,9 @@
 [ext_resource type="Texture2D" uid="uid://cmnipubex0cyb" path="res://tools-check-spelling.png" id="47_epjfw"]
 [ext_resource type="Texture2D" uid="uid://c5owytqj4ipgs" path="res://yast-timezone.svg" id="48_cpg8b"]
 [ext_resource type="Texture2D" uid="uid://ckqm8n1xn46ns" path="res://proxy.png" id="49_xryqn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xwyl"]
+bg_color = Color(0.3843, 0.396585, 0.63, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -362,7 +365,7 @@ theme_override_font_sizes/italics_font_size = 32
 theme_override_font_sizes/mono_font_size = 32
 theme_override_font_sizes/normal_font_size = 32
 theme_override_font_sizes/bold_font_size = 32
-text = "INPUTS"
+text = "INPUTS AND OUTPUTS"
 horizontal_alignment = 2
 
 [node name="TabContainer" type="TabContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs"]
@@ -636,6 +639,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="APPS" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -767,7 +771,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="UPDATE" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -799,37 +802,31 @@ size_flags_vertical = 3
 
 [node name="check for update" type="Button" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates"]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchors_preset = -1
+anchor_left = 0.645833
+anchor_top = 0.0740072
+anchor_right = 0.645833
+anchor_bottom = 0.0740072
 offset_top = -15.5
 offset_right = 143.0
 offset_bottom = 15.5
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_2xwyl")
 text = "Check for Update"
 script = ExtResource("28_rsyi7")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates"]
 layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0810185
+anchor_top = 0.0433213
+anchor_right = 0.0810185
+anchor_bottom = 0.0433213
 offset_right = 215.0
 offset_bottom = 23.0
 text = "Check for available Updates"
-
-[node name="configure automatic Update" type="Button" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -15.5
-offset_right = 113.0
-offset_bottom = 15.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Configure Automatic Update"
-script = ExtResource("29_hb6nx")
+metadata/_edit_use_anchors_ = true
 
 [node name="configure update settings" type="Control" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -839,67 +836,28 @@ size_flags_vertical = 3
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Configure Update and settings"
+text = "Update Options"
 
-[node name="Label2" type="Label" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 99.0
-offset_right = 240.0
-offset_bottom = 122.0
-tooltip_text = "**Select Your Update Branch**"
-mouse_filter = 0
-text = "Kainat OS Release branch"
-
-[node name="OptionButton" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
+[node name="configure automatic Update" type="Button" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.137731
-anchor_top = 0.554152
-anchor_right = 0.137731
-anchor_bottom = 0.554152
+anchor_left = 0.0196759
+anchor_top = 0.232852
+anchor_right = 0.0196759
+anchor_bottom = 0.232852
 offset_top = -15.5
-offset_right = 97.0
+offset_right = 229.0
 offset_bottom = 15.5
 grow_vertical = 2
-selected = 1
-item_count = 3
-popup/item_0/text = "grandpa"
-popup/item_0/id = 1
-popup/item_1/text = "Normal"
-popup/item_1/id = 0
-popup/item_2/text = "rolling"
-popup/item_2/id = 2
+text = "Configure Automatic Update"
+script = ExtResource("29_hb6nx")
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
-layout_mode = 0
-offset_left = 319.0
-offset_top = -60.0
-offset_right = 776.0
-offset_bottom = 226.0
-text = "**Grandpa**
-Ideal for users who prioritize rock-solid stability and long-term support. Receive major updates every two years.
-
-**Normal**
-A balanced choice that offers a compromise between stability and freshness. You’ll receive updates every six months.
-
-**Rolling**
-A continuously updated, cutting-edge release not recommended for typical users. New packages and features are available as soon as they’re released.
-"
-
-[node name="Label3" type="Label" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.636364
-anchor_top = -0.422908
-anchor_right = 0.636364
-anchor_bottom = -0.422908
-offset_left = -154.0
-offset_bottom = 23.0
-grow_horizontal = 0
-text = "Update branch info:"
-metadata/_edit_use_anchors_ = true
+[node name="Update" type="Sprite2D" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer"]
+self_modulate = Color(0.488, 0.5036, 0.8, 0.984314)
+position = Vector2(51, 45)
+scale = Vector2(1.59375, 1.59375)
+texture = ExtResource("6_t5yrj")
 
 [node name="PERSONALIZATION" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -1360,7 +1318,7 @@ layout_mode = 2
 [connection signal="text_changed" from="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/Control/search_app" to="main-panel/MarginContainer/HBoxContainer/APPS/Control" method="_on_search_app_text_changed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/APPS/Control/default_apps" to="main-panel/MarginContainer/HBoxContainer/APPS/Control/default_apps" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" to="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/configure automatic Update" to="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/configure automatic Update" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings/configure automatic Update" to="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings/configure automatic Update" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
