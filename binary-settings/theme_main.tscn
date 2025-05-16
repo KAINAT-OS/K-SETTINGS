@@ -347,7 +347,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Inputs" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -418,16 +417,12 @@ vertical_alignment = 1
 [node name="btn_keyboard" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.29602
-anchor_top = 0.211991
-anchor_right = 0.29602
-anchor_bottom = 0.211991
-offset_left = -20.0
-offset_top = -32.0
-offset_right = 20.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_left = 0.279867
+anchor_top = 0.165785
+anchor_right = 0.279867
+anchor_bottom = 0.165785
+offset_right = 40.0
+offset_bottom = 40.0
 scale = Vector2(2, 2)
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -438,11 +433,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/btn_keyboard"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.225
+anchor_top = 1.4
+anchor_right = 0.775
+anchor_bottom = 1.4
 offset_left = -26.0
 offset_top = -23.0
 offset_right = 26.0
@@ -451,17 +446,22 @@ grow_vertical = 0
 text = "Keyboard"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="btn_gamepad" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.454348
-anchor_top = 0.100402
-anchor_right = 0.454348
-anchor_bottom = 0.100402
-offset_right = 264.0
-offset_bottom = 264.0
-scale = Vector2(0.5, 0.5)
+anchor_left = 0.460407
+anchor_top = 0.160219
+anchor_right = 0.460407
+anchor_bottom = 0.160219
+offset_left = -0.208038
+offset_top = 0.155998
+offset_right = 39.792
+offset_bottom = 40.156
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 1
@@ -476,12 +476,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -26.0
-offset_top = -23.0
-offset_right = 26.0
+offset_left = -45.5
+offset_top = -10.0
+offset_right = 66.5
+offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 24
 text = "GamePad"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -489,13 +489,13 @@ vertical_alignment = 1
 [node name="btn_touchpad" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.671739
-anchor_top = 0.100402
-anchor_right = 0.671739
-anchor_bottom = 0.100402
+anchor_left = 0.654867
+anchor_top = 0.188713
+anchor_right = 0.654867
+anchor_bottom = 0.188713
 offset_right = 264.0
 offset_bottom = 264.0
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 1
@@ -507,16 +507,16 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/btn_touchpad"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.382576
-anchor_top = 1.07955
-anchor_right = 0.617424
-anchor_bottom = 1.12121
+anchor_left = -0.268939
+anchor_top = 1.07197
+anchor_right = 1.26894
+anchor_bottom = 1.48485
 offset_left = -26.0
 offset_top = -23.0
 offset_right = 26.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 96
 text = "Touchpad"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -771,6 +771,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="UPDATE" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -1167,27 +1168,34 @@ layout_mode = 2
 [node name="Connections" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Network/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0952381
-anchor_top = 0.305221
-anchor_right = 0.0952381
-anchor_bottom = 0.305221
+anchor_left = 0.0896018
+anchor_top = 0.183946
+anchor_right = 0.0995575
+anchor_bottom = 0.23913
 offset_right = 117.0
 offset_bottom = 31.0
-text = "🌐Connections"
+text = "Connections"
+icon = ExtResource("10_8h8qr")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Connections2" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Network/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.27619
-anchor_top = 0.305221
-anchor_right = 0.280952
-anchor_bottom = 0.323293
+anchor_left = 0.285398
+anchor_top = 0.173913
+anchor_right = 0.301991
+anchor_bottom = 0.242475
 offset_right = 117.0
 offset_bottom = 31.0
 text = "Proxy
 "
 icon = ExtResource("49_xryqn")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="About" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
