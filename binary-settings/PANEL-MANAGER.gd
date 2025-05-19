@@ -31,7 +31,7 @@ func _ready() -> void:
 	btn_language_and_locals.pressed.connect(show_panel.bind(panels[5]))
 	button_8.pressed.connect(show_panel.bind(panels[6]))
 	button_9.pressed.connect(show_panel.bind(panels[7]))
-	show_panel(panels[0])
+	show_panel(panels[4])
 	sa_dark.connect("toggled", Callable(self,"save_variable"))
 	btn_User.connect("pressed", Callable(self,"open_users"))
 	load_variable()
