@@ -191,7 +191,6 @@ icon = ExtResource("12_gngh3")
 
 [node name="Display" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 modulate = Color(0.611765, 0.631373, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -641,6 +640,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="APPS" type="PanelContainer" parent="main-panel/ColorRect/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 modulate = Color(0.611765, 0.631373, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3

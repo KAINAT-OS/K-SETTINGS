@@ -6,7 +6,7 @@ var panels: Array[PanelContainer]=[]
 @onready var apps: Button = %Apps
 @onready var update: Button = %Update
 @onready var personalization: Button = %personalization
-@onready var btn_User: Button = %btn_Users
+@onready var btn_User: Button = %btn_Users_and_accounts
 @onready var button_8: Button = %Button8
 @onready var button_9: Button = %Button9
 @onready var button_10: Button = %Button10
@@ -15,13 +15,14 @@ var panels: Array[PanelContainer]=[]
 @onready var sa_dark: CheckButton = %sa_dark
 @onready var labelx: Label = %Labeld
 @onready var btn_language_and_locals: Button = %btn_Language_And_Locals
+@onready var btn_users: Button = %btn_Users
 
 var darktheme=load("res://dark_theme.tres")
 var lighttheme=load("res://light_theme.tres")
 
 
 func _ready() -> void:
-	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About]
+	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About,%User_And_Accounts]
 	
 	display.pressed.connect(show_panel.bind(panels[0]))
 	input.pressed.connect(show_panel.bind(panels[1]))
@@ -33,11 +34,11 @@ func _ready() -> void:
 	button_9.pressed.connect(show_panel.bind(panels[7]))
 	show_panel(panels[4])
 	sa_dark.connect("toggled", Callable(self,"save_variable"))
-	btn_User.connect("pressed", Callable(self,"open_users"))
+	btn_User.pressed.connect(show_panel.bind(panels[8]))
 	load_variable()
 
 func show_panel(panel_to_show:PanelContainer) -> void:
-	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About]
+	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About,%User_And_Accounts]
 
 	for panel in panels:
 		panel.hide()
@@ -116,3 +117,23 @@ func _on_btn_fullabout_pressed() -> void:
 
 func _on_button_10_pressed() -> void:
 	OS.execute("systemsettings5",[])
+
+
+func _on_btn_users_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_users"])
+
+
+func _on_btn_accounts_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_kaccounts"])
+
+
+func _on_btn_kde_wallet_pressed() -> void:
+	OS.execute("systemsettings",["kcm_kwallet5"])
+
+
+func _on_shortcuts_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_keys"])
+
+
+func _on_autostart_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_autostart"])

@@ -69,7 +69,7 @@ func _build_ui_list() -> void:
 		pkg=pkg[0].split("=")
 		name_button.text = pkg[1]
 		name_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		name_button.flat = true
+		#name_button.flat = false
 		name_button.connect("pressed", Callable(self, "_on_app_clicked").bind(app))
 
 		# Uninstall button
