@@ -5,4 +5,6 @@ func _ready() -> void:
 	manage_package.pressed.connect(Callable(_on_pressed))
 
 func _on_pressed() -> void:
-	OS.execute("pkexec", ["synaptic"], [], true)
+	var out=[]
+	OS.execute("synaptic-pkexec",[],out)
+	print(out)

@@ -198,7 +198,6 @@ icon = ExtResource("12_s4ix2")
 
 [node name="Display" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -222,90 +221,6 @@ horizontal_alignment = 2
 [node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer"]
 layout_mode = 2
 script = ExtResource("13_vj7tl")
-
-[node name="resolution" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
-layout_mode = 1
-anchor_left = 0.286836
-anchor_top = 0.374016
-anchor_right = 0.286836
-anchor_bottom = 0.374016
-offset_left = -74.5
-offset_top = -17.0
-offset_right = 74.5
-offset_bottom = 17.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/resolution"]
-layout_mode = 0
-offset_right = 306.0
-offset_bottom = 28.0
-
-[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/resolution/HBoxContainer"]
-layout_mode = 2
-text = "resolution:"
-
-[node name="ResolutionDropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/resolution/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="refresh_rate" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
-layout_mode = 1
-anchor_left = 0.286836
-anchor_top = 0.496287
-anchor_right = 0.286836
-anchor_bottom = 0.496287
-offset_left = -74.5
-offset_top = -17.0
-offset_right = 74.5
-offset_bottom = 17.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/refresh_rate"]
-layout_mode = 0
-offset_right = 306.0
-offset_bottom = 28.0
-
-[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/refresh_rate/HBoxContainer"]
-layout_mode = 2
-text = "refresh rate"
-
-[node name="RT_Dropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/refresh_rate/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="display" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
-layout_mode = 1
-anchor_left = 0.291609
-anchor_top = 0.251968
-anchor_right = 0.291609
-anchor_bottom = 0.251968
-offset_left = -74.5
-offset_top = -17.0
-offset_right = 74.5
-offset_bottom = 17.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/display"]
-layout_mode = 0
-offset_right = 306.0
-offset_bottom = 28.0
-
-[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/display/HBoxContainer"]
-layout_mode = 2
-text = "Display:"
-
-[node name="MonitorDropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/display/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
 layout_mode = 1
@@ -350,6 +265,76 @@ offset_right = 56.0
 offset_bottom = 30.0
 text = "Apply"
 metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0671296
+anchor_top = 0.16129
+anchor_right = 0.689815
+anchor_bottom = 0.693548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dISPLAY" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/dISPLAY"]
+layout_mode = 2
+text = "Display:"
+
+[node name="MonitorDropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/dISPLAY"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RESULATION" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RESULATION"]
+layout_mode = 2
+text = "resolution:"
+
+[node name="ResolutionDropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RESULATION"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RATE" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RATE"]
+layout_mode = 2
+text = "refresh rate"
+
+[node name="RT_Dropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RATE"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BRIGTHNESS" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "brightness"
+
+[node name="HSlider" type="HSlider" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.05
+max_value = 1.0
+step = 0.01
+value = 0.95
+
+[node name="bdis" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Inputs" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -483,6 +468,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="APPS" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -599,14 +585,15 @@ autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control"]
+layout_mode = 1
 anchors_preset = 0
-offset_right = 218.0
-offset_bottom = 81.0
+offset_right = 285.0
+offset_bottom = 79.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control"]
-layout_mode = 0
-offset_right = 277.0
-offset_bottom = 66.0
+layout_mode = 1
+offset_right = 267.0
+offset_bottom = 101.0
 
 [node name="default_apps" type="Button" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control/VBoxContainer"]
 layout_mode = 2
@@ -634,7 +621,7 @@ anchor_bottom = 1.0
 offset_top = -31.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Manage Packages(package manager)"
+text = "Package Manager"
 script = ExtResource("31_f3uth")
 
 [node name="UPDATE" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
@@ -1222,6 +1209,7 @@ layout_mode = 2
 
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer/Button10" to="main-panel/MarginContainer" method="_on_button_10_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" method="_on_pressed"]
+[connection signal="value_changed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS/HSlider" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_Mouse" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_Mouse" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/shortcuts" to="main-panel/MarginContainer" method="_on_shortcuts_pressed"]

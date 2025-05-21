@@ -4,6 +4,7 @@ extends Control
 @onready var resolution_dd    : OptionButton = %ResolutionDropdown
 @onready var applyx: Button = %apply
 @onready var rt_dropdown: OptionButton = %RT_Dropdown
+@onready var h_slider: HSlider = $VBoxContainer/BRIGTHNESS/HSlider
 
 # A list of common resolutions; replace or extend as desired:
 var common_res := [
@@ -21,7 +22,9 @@ func _ready() -> void:
 	_populate_refresh_rate()
 	_default_resulation_monitor()
 	applyx.connect("pressed",Callable(self,"_apply_settings"))
-
+	h_slider.value=load_variable()
+	%bdis.text=str(h_slider.value*100)+"%"
+	
 func _default_resulation_monitor() -> void:
 	var primary_screen := DisplayServer.get_primary_screen()
 	var screen_size :Vector2i = DisplayServer.screen_get_size(primary_screen)
@@ -84,16 +87,52 @@ func _apply_settings() -> void:
 	# Change window mode
 
 	# Apply settings using xrandr
+	var brightness = h_slider.value
 	var monitor_name_raw =[]
 	OS.execute("bash",["-c","xrandr | grep 'primary' | cut -d' ' -f1"],monitor_name_raw)
 	var monitor_name = monitor_name_raw[0].split("\n")[0]
 	print (monitor_name)
   # Replace with the actual monitor name
 	var mode_str = "%dx%d" % [res.x, res.y]
-	var cmd_args = ["--output", monitor_name, "--mode", mode_str, "--rate", rate]
+	var cmd_args = ["--output", monitor_name, "--mode", mode_str, "--rate", rate, "--brightness", brightness]
 	print (cmd_args)
 	var exit_code = OS.execute("xrandr", cmd_args,[])
 	if exit_code != 0:
 		push_error("Failed to apply display settings.")
 	else:
 		print("Display settings applied successfully.")
+	save_variable()
+		
+func _on_h_slider_value_changed(value: float) -> void:
+	_apply_settings()
+	%bdis.text=str(h_slider.value*100)+"%"
+
+
+func save_variable():
+	var config = ConfigFile.new()
+	var err = config.load("user://settings.cfg")  # Load existing config or create new
+	
+	# Set the variable value in a section
+	config.set_value("settings", "brightness", h_slider.value)
+	
+	# Save the config file
+	err = config.save("user://settings.cfg")
+	if err != OK:
+		print("Failed to save config file!")
+	else:
+		print("Config saved successfully.")
+
+
+
+func load_variable():
+	var config = ConfigFile.new()
+	var err = config.load("user://settings.cfg")
+	
+	if err == OK:
+		# Read the value from the section with a default fallback
+		var my_var = config.get_value("settings", "brightness", 1)
+		print("Loaded variable:", my_var)
+		return my_var
+	else:
+		print("Failed to load config file!")
+		return null
