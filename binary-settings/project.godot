@@ -17,8 +17,8 @@ run/main_scene="uid://cxxp1b6n8kekh"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="kainat-settingss"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-run/max_fps=30
 run/low_processor_mode=true
+run/low_processor_mode_sleep_usec=10000
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -26,7 +26,8 @@ config/icon="uid://l5ixaki8qupn"
 
 [display]
 
-window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
 
 [editor_plugins]

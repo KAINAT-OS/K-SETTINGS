@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cxxp1b6n8kekh"]
+[gd_scene load_steps=60 format=3 uid="uid://cxxp1b6n8kekh"]
 
 [ext_resource type="Texture2D" uid="uid://djf2713oc0vqh" path="res://logos-and-icons/window-close.svg" id="1_2xwyl"]
 [ext_resource type="Script" uid="uid://0gccktbcfwmh" path="res://PANEL-MANAGER.gd" id="1_hl0yf"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://ckqm8n1xn46ns" path="res://proxy.png" id="49_xryqn"]
 [ext_resource type="Texture2D" uid="uid://sykbimmcmbyn" path="res://logos-and-icons/online-symbolic.svg" id="50_q8tmx"]
 [ext_resource type="Texture2D" uid="uid://dnerlyviv3rql" path="res://logos-and-icons/wallet.svg" id="51_fw7gh"]
+[ext_resource type="Texture2D" uid="uid://crklc00ln57ue" path="res://logos-and-icons/ibus-setup-hangul.png" id="52_8h8qr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xwyl"]
 bg_color = Color(0.3843, 0.396585, 0.63, 1)
@@ -198,6 +199,7 @@ icon = ExtResource("12_s4ix2")
 
 [node name="Display" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -907,7 +909,6 @@ script = ExtResource("44_moqjb")
 
 [node name="Language_And_Locals" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -965,6 +966,14 @@ layout_mode = 2
 size_flags_vertical = 0
 text = "Spell Checking"
 icon = ExtResource("47_epjfw")
+alignment = 0
+
+[node name="btn_Spell_Checking2" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Add Language for Typing"
+icon = ExtResource("52_8h8qr")
 alignment = 0
 
 [node name="btn_Date_And_Time" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
@@ -1228,6 +1237,7 @@ layout_mode = 2
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer/btn_Spell_Checking2" to="main-panel/MarginContainer" method="_on_btn_spell_checking_2_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Network/Control/VBoxContainer/Connections" to="main-panel/MarginContainer" method="_on_connections_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Network/Control/VBoxContainer/Connections2" to="main-panel/MarginContainer" method="_on_connections_2_pressed"]
 [connection signal="ready" from="main-panel/MarginContainer/HBoxContainer/About/Control/MarginContainer/about_text" to="main-panel/MarginContainer" method="_on_about_text_ready"]
