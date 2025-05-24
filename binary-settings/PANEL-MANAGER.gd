@@ -16,6 +16,7 @@ var panels: Array[PanelContainer]=[]
 @onready var labelx: Label = %Labeld
 @onready var btn_language_and_locals: Button = %btn_Language_And_Locals
 @onready var btn_users: Button = %btn_Users
+@onready var btn_about: Button = %btn_about
 
 var darktheme=load("res://dark_theme.tres")
 var lighttheme=load("res://light_theme.tres")
@@ -31,7 +32,7 @@ func _ready() -> void:
 	personalization.pressed.connect(show_panel.bind(panels[4]))
 	btn_language_and_locals.pressed.connect(show_panel.bind(panels[5]))
 	button_8.pressed.connect(show_panel.bind(panels[6]))
-	button_9.pressed.connect(show_panel.bind(panels[7]))
+	btn_about.pressed.connect(show_panel.bind(panels[7]))
 	show_panel(panels[4])
 	sa_dark.connect("toggled", Callable(self,"save_variable"))
 	btn_User.pressed.connect(show_panel.bind(panels[8]))
@@ -141,3 +142,12 @@ func _on_autostart_pressed() -> void:
 
 func _on_btn_spell_checking_2_pressed() -> void:
 	OS.execute("ibus-setup",[])
+
+
+func _on_btn_mouse_2_pressed() -> void:
+	OS.execute("bash",["-c","piper &"],[],true)
+	
+
+
+func _on_btn_mouse_3_pressed() -> void:
+	OS.execute("check-razer",[])

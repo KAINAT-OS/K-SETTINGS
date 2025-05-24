@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cxxp1b6n8kekh"]
+[gd_scene load_steps=61 format=3 uid="uid://cxxp1b6n8kekh"]
 
 [ext_resource type="Texture2D" uid="uid://djf2713oc0vqh" path="res://logos-and-icons/window-close.svg" id="1_2xwyl"]
 [ext_resource type="Script" uid="uid://0gccktbcfwmh" path="res://PANEL-MANAGER.gd" id="1_hl0yf"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://djqjb0wi6ptyd" path="res://language.png" id="9_f3uth"]
 [ext_resource type="Texture2D" uid="uid://dhfeiuq3m274e" path="res://network.png" id="10_8h8qr"]
 [ext_resource type="Texture2D" uid="uid://c2cdp3dadqbad" path="res://about.png" id="11_a2da7"]
+[ext_resource type="Texture2D" uid="uid://dkudmft38obeu" path="res://logos-and-icons/preferences-system-power-management.svg" id="11_s4ix2"]
 [ext_resource type="Texture2D" uid="uid://b2e6hs4fwv3ki" path="res://all-settings.png" id="12_s4ix2"]
 [ext_resource type="Script" uid="uid://cb1nu3t8ji7x5" path="res://Display-control.gd" id="13_vj7tl"]
 [ext_resource type="Script" uid="uid://c67jtsbqle46e" path="res://advance-display.gd" id="14_66uxi"]
@@ -185,6 +186,14 @@ unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("2_jqaei")
+text = "Power settings"
+icon = ExtResource("11_s4ix2")
+
+[node name="btn_about" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_jqaei")
 text = "About"
 icon = ExtResource("11_a2da7")
 
@@ -340,7 +349,6 @@ size_flags_horizontal = 3
 
 [node name="Inputs" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -379,13 +387,72 @@ offset_top = 54.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="btn_Mouse" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="mouse-label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+text = "Mouse settings"
+
+[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+layout_mode = 2
+
+[node name="btn_Mouse" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
 text = "Mouse"
 icon = ExtResource("4_q8tmx")
 alignment = 0
 script = ExtResource("15_3526b")
+metadata/_edit_use_anchors_ = true
+
+[node name="mouse-label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Gaming Mouse settings"
+
+[node name="Control2" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="btn_Mouse2" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Piper • General Gaming Mouse Settings"
+icon = ExtResource("4_q8tmx")
+alignment = 0
+script = ExtResource("15_3526b")
+
+[node name="btn_Mouse3" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "razer mouse settings"
+icon = ExtResource("4_q8tmx")
+alignment = 0
+script = ExtResource("15_3526b")
+
+[node name="keyboard-label2" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+layout_mode = 2
+text = "Keyboard settings"
+
+[node name="Control3" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
@@ -909,6 +976,7 @@ script = ExtResource("44_moqjb")
 
 [node name="Language_And_Locals" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -1219,7 +1287,9 @@ layout_mode = 2
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer/Button10" to="main-panel/MarginContainer" method="_on_button_10_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" method="_on_pressed"]
 [connection signal="value_changed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS/HSlider" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control" method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_Mouse" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_Mouse" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse2" to="main-panel/MarginContainer" method="_on_btn_mouse_2_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse3" to="main-panel/MarginContainer" method="_on_btn_mouse_3_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/shortcuts" to="main-panel/MarginContainer" method="_on_shortcuts_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_gamepad" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_gamepad" method="_on_pressed"]
