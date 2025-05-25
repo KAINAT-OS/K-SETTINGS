@@ -23,7 +23,7 @@ var lighttheme=load("res://light_theme.tres")
 
 
 func _ready() -> void:
-	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About,%User_And_Accounts]
+	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About,%User_And_Accounts,%power_settings]
 	
 	display.pressed.connect(show_panel.bind(panels[0]))
 	input.pressed.connect(show_panel.bind(panels[1]))
@@ -33,13 +33,16 @@ func _ready() -> void:
 	btn_language_and_locals.pressed.connect(show_panel.bind(panels[5]))
 	button_8.pressed.connect(show_panel.bind(panels[6]))
 	btn_about.pressed.connect(show_panel.bind(panels[7]))
+	btn_User.pressed.connect(show_panel.bind(panels[8]))
+
+	button_9.pressed.connect(show_panel.bind(panels[9]))
 	show_panel(panels[4])
 	sa_dark.connect("toggled", Callable(self,"save_variable"))
-	btn_User.pressed.connect(show_panel.bind(panels[8]))
 	load_variable()
+	_showorhide_nvidia_settings()
 
 func show_panel(panel_to_show:PanelContainer) -> void:
-	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About,%User_And_Accounts]
+	panels=[%Display, %Inputs, %APPS, %UPDATE, %PERSONALIZATION,%Language_And_Locals,%Network,%About,%User_And_Accounts,%power_settings]
 
 	for panel in panels:
 		panel.hide()
@@ -151,3 +154,29 @@ func _on_btn_mouse_2_pressed() -> void:
 
 func _on_btn_mouse_3_pressed() -> void:
 	OS.execute("check-razer",[])
+
+
+func _on_btn_power_saving_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_powerdevilprofilesconfig"])
+
+
+func _on_btn_activity_power_settings_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_powerdevilactivitiesconfig"])
+
+
+func _on_btn_advanced_power_settigns_pressed() -> void:
+	OS.execute("kcmshell5", ["kcm_powerdevilglobalconfig"])
+	
+	
+	
+func _showorhide_nvidia_settings() -> void:
+	var check=OS.execute("dpkg", ["-s", "nvidia-driver"],[],false,false)
+	match check:
+		0:
+			%"btn_nvidia-settings".show()
+		_: 
+			%"btn_nvidia-settings".hide()
+
+
+func _on_btn_nvidiasettings_pressed() -> void:
+	OS.execute("nvidia-settings",[])

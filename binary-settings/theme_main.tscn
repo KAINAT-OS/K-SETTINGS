@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cxxp1b6n8kekh"]
+[gd_scene load_steps=63 format=3 uid="uid://cxxp1b6n8kekh"]
 
 [ext_resource type="Texture2D" uid="uid://djf2713oc0vqh" path="res://logos-and-icons/window-close.svg" id="1_2xwyl"]
 [ext_resource type="Script" uid="uid://0gccktbcfwmh" path="res://PANEL-MANAGER.gd" id="1_hl0yf"]
@@ -59,6 +59,8 @@
 [ext_resource type="Texture2D" uid="uid://sykbimmcmbyn" path="res://logos-and-icons/online-symbolic.svg" id="50_q8tmx"]
 [ext_resource type="Texture2D" uid="uid://dnerlyviv3rql" path="res://logos-and-icons/wallet.svg" id="51_fw7gh"]
 [ext_resource type="Texture2D" uid="uid://crklc00ln57ue" path="res://logos-and-icons/ibus-setup-hangul.png" id="52_8h8qr"]
+[ext_resource type="Texture2D" uid="uid://c6fe3n8gu12rk" path="res://logos-and-icons/activities.svg" id="58_vj7tl"]
+[ext_resource type="Texture2D" uid="uid://dun7r75bldagg" path="res://logos-and-icons/application-menu.svg" id="59_vj7tl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xwyl"]
 bg_color = Color(0.3843, 0.396585, 0.63, 1)
@@ -208,7 +210,6 @@ icon = ExtResource("12_s4ix2")
 
 [node name="Display" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -347,8 +348,25 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="btn_nvidia-settings" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.729391
+anchor_right = 1.0
+anchor_bottom = 0.729391
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nvidia-settings"
+alignment = 0
+metadata/_edit_use_anchors_ = true
+
 [node name="Inputs" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -1228,6 +1246,66 @@ icon = ExtResource("51_fw7gh")
 alignment = 0
 expand_icon = true
 
+[node name="power_settings" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/power_settings"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/power_settings/MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.701991, 0.717632, 0.910109, 1)
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+text = "Power Settings"
+horizontal_alignment = 2
+
+[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/power_settings"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control"]
+layout_mode = 2
+offset_top = 94.0
+offset_right = 904.0
+offset_bottom = 598.0
+
+[node name="btn_power_saving" type="Button" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_jqaei")
+text = "energy saving"
+icon = ExtResource("11_s4ix2")
+alignment = 0
+
+[node name="btn_activity_power_settings" type="Button" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_jqaei")
+text = "Activity Power settings"
+icon = ExtResource("58_vj7tl")
+alignment = 0
+expand_icon = true
+
+[node name="btn_advanced_power_settigns" type="Button" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_jqaei")
+text = "Advanced Power Settings"
+icon = ExtResource("59_vj7tl")
+alignment = 0
+expand_icon = true
+
 [node name="header" type="Panel" parent="."]
 layout_mode = 0
 offset_right = 1152.0
@@ -1287,6 +1365,7 @@ layout_mode = 2
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer/Button10" to="main-panel/MarginContainer" method="_on_button_10_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" method="_on_pressed"]
 [connection signal="value_changed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS/HSlider" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/btn_nvidia-settings" to="main-panel/MarginContainer" method="_on_btn_nvidiasettings_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" method="_on_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse2" to="main-panel/MarginContainer" method="_on_btn_mouse_2_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse3" to="main-panel/MarginContainer" method="_on_btn_mouse_3_pressed"]
@@ -1315,6 +1394,9 @@ layout_mode = 2
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer/btn_Users" to="main-panel/MarginContainer" method="_on_btn_users_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer/btn_accounts" to="main-panel/MarginContainer" method="_on_btn_accounts_pressed"]
 [connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer/btn_kde_wallet" to="main-panel/MarginContainer" method="_on_btn_kde_wallet_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer/btn_power_saving" to="main-panel/MarginContainer" method="_on_btn_power_saving_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer/btn_activity_power_settings" to="main-panel/MarginContainer" method="_on_btn_activity_power_settings_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer/btn_advanced_power_settigns" to="main-panel/MarginContainer" method="_on_btn_advanced_power_settigns_pressed"]
 [connection signal="gui_input" from="header" to="header" method="_on_gui_input"]
 [connection signal="pressed" from="header/cross" to="header" method="_on_cross_pressed"]
 [connection signal="pressed" from="header/minimize" to="header" method="_on_minimize_pressed"]
