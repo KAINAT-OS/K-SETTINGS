@@ -96,3 +96,7 @@ func _on_piper_pressed() -> void:
 
 func _on_btn_nvidiasettings_pressed() -> void:
 	OS.execute("nvidia-settings",[])
+
+
+func _on_fullsettings_pressed() -> void:
+	OS.execute("systemsettings",[])

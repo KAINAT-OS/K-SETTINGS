@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2dtf22jre3an"]
+[gd_scene load_steps=6 format=3 uid="uid://d2dtf22jre3an"]
 
 [ext_resource type="Script" uid="uid://3mdrplok8fmb" path="res://new_settings_app.gd" id="1_mdioh"]
 [ext_resource type="PackedScene" uid="uid://dxhjmdogbed6a" path="res://scenes/tabs.tscn" id="2_uf588"]
+[ext_resource type="Texture2D" uid="uid://b2e6hs4fwv3ki" path="res://all-settings.png" id="3_ls4q4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdioh"]
 bg_color = Color(0.0732, 0.07554, 0.12, 1)
@@ -82,8 +83,22 @@ button_group = SubResource("ButtonGroup_uf588")
 [node name="ABOUT" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
 button_group = SubResource("ButtonGroup_uf588")
 
+[node name="full-settings" type="Button" parent="Panel/VBoxContainer/HSplitContainer/left-panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Full Settings"
+icon = ExtResource("3_ls4q4")
+
 [node name="right-panel" type="Panel" parent="Panel/VBoxContainer/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/left-panel/full-settings" to="." method="_on_fullsettings_pressed"]
 
 [editable path="Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]
