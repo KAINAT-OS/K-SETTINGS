@@ -98,23 +98,23 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1_hl0yf")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer"]
+[node name="hsplit-container" type="HSplitContainer" parent="main-panel/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 2
 
-[node name="settings-panel-margin" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="settings-panel-margin" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container"]
 layout_mode = 2
 theme_override_constants/margin_bottom = 0
 
-[node name="settings_panel" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin"]
+[node name="settings_panel" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel"]
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 
-[node name="display" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="display" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -124,7 +124,7 @@ text = "Display
 icon = ExtResource("3_2xwyl")
 expand_icon = true
 
-[node name="input" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="input" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -134,7 +134,7 @@ output devices
 "
 icon = ExtResource("4_q8tmx")
 
-[node name="Apps" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="Apps" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -143,7 +143,7 @@ text = "Apps
 "
 icon = ExtResource("5_fw7gh")
 
-[node name="Update" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="Update" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -151,7 +151,7 @@ button_group = ExtResource("2_jqaei")
 text = "Update "
 icon = ExtResource("6_t5yrj")
 
-[node name="personalization" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="personalization" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -159,7 +159,7 @@ button_group = ExtResource("2_jqaei")
 text = "personalization"
 icon = ExtResource("7_bav4n")
 
-[node name="btn_Users_and_accounts" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="btn_Users_and_accounts" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -167,7 +167,7 @@ button_group = ExtResource("2_jqaei")
 text = "Users"
 icon = ExtResource("8_pkgjl")
 
-[node name="btn_Language_And_Locals" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="btn_Language_And_Locals" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -175,7 +175,7 @@ button_group = ExtResource("2_jqaei")
 text = "Language And Locals"
 icon = ExtResource("9_f3uth")
 
-[node name="Button8" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="Button8" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -183,7 +183,7 @@ button_group = ExtResource("2_jqaei")
 text = "Network And Connections"
 icon = ExtResource("10_8h8qr")
 
-[node name="Button9" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="Button9" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -191,7 +191,7 @@ button_group = ExtResource("2_jqaei")
 text = "Power settings"
 icon = ExtResource("11_s4ix2")
 
-[node name="btn_about" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="btn_about" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -199,7 +199,7 @@ button_group = ExtResource("2_jqaei")
 text = "About"
 icon = ExtResource("11_a2da7")
 
-[node name="Button10" type="Button" parent="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer"]
+[node name="Button10" type="Button" parent="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -208,19 +208,20 @@ text = "All Settings
 "
 icon = ExtResource("12_s4ix2")
 
-[node name="Display" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="Display" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/Display"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/Display"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/bold_italics_font_size = 32
 theme_override_font_sizes/italics_font_size = 32
@@ -230,11 +231,11 @@ theme_override_font_sizes/bold_font_size = 32
 text = "DISPLAY"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer"]
 layout_mode = 2
 script = ExtResource("13_vj7tl")
 
-[node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
+[node name="Label" type="Label" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.34375
@@ -250,7 +251,7 @@ Choose your display and resolution."
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="all settings" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
+[node name="all settings" type="Button" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -265,7 +266,7 @@ grow_vertical = 0
 text = "Advance display settings"
 script = ExtResource("14_66uxi")
 
-[node name="apply" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
+[node name="apply" type="Button" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -278,7 +279,7 @@ offset_bottom = 30.0
 text = "Apply"
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0671296
@@ -291,51 +292,51 @@ theme_override_constants/separation = 20
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="dISPLAY" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+[node name="dISPLAY" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/dISPLAY"]
+[node name="text" type="Label" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/dISPLAY"]
 layout_mode = 2
 text = "Display:"
 
-[node name="MonitorDropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/dISPLAY"]
+[node name="MonitorDropdown" type="OptionButton" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/dISPLAY"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RESULATION" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+[node name="RESULATION" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RESULATION"]
+[node name="text" type="Label" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/RESULATION"]
 layout_mode = 2
 text = "resolution:"
 
-[node name="ResolutionDropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RESULATION"]
+[node name="ResolutionDropdown" type="OptionButton" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/RESULATION"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RATE" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+[node name="RATE" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="text" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RATE"]
+[node name="text" type="Label" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/RATE"]
 layout_mode = 2
 text = "refresh rate"
 
-[node name="RT_Dropdown" type="OptionButton" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/RATE"]
+[node name="RT_Dropdown" type="OptionButton" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/RATE"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BRIGTHNESS" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer"]
+[node name="BRIGTHNESS" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
+[node name="Label" type="Label" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "brightness"
 
-[node name="HSlider" type="HSlider" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
+[node name="HSlider" type="HSlider" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
 layout_mode = 2
 size_flags_horizontal = 3
 min_value = 0.05
@@ -343,12 +344,12 @@ max_value = 1.0
 step = 0.01
 value = 0.95
 
-[node name="bdis" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
+[node name="bdis" type="Label" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="btn_nvidia-settings" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control"]
+[node name="btn_nvidia-settings" type="Button" parent="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -364,20 +365,20 @@ text = "Nvidia-settings"
 alignment = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Inputs" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="Inputs" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/Inputs"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/Inputs/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/Inputs/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/bold_italics_font_size = 32
 theme_override_font_sizes/italics_font_size = 32
@@ -387,16 +388,17 @@ theme_override_font_sizes/bold_font_size = 32
 text = "INPUTS AND OUTPUTS"
 horizontal_alignment = 2
 
-[node name="TabContainer" type="TabContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs"]
+[node name="TabContainer" type="TabContainer" parent="main-panel/MarginContainer/hsplit-container/Inputs"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-current_tab = 0
+current_tab = 1
 
-[node name="input devices" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer"]
+[node name="input devices" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -405,20 +407,20 @@ offset_top = 54.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="mouse-label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="mouse-label" type="Label" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 text = "Mouse settings"
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 
-[node name="Control2" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="Control2" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 
-[node name="btn_Mouse" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+[node name="btn_Mouse" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
 text = "Mouse"
@@ -427,24 +429,24 @@ alignment = 0
 script = ExtResource("15_3526b")
 metadata/_edit_use_anchors_ = true
 
-[node name="mouse-label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+[node name="mouse-label" type="Label" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Gaming Mouse settings"
 
-[node name="Control2" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+[node name="Control2" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Control3" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+[node name="Control3" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Control4" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+[node name="Control4" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="btn_Mouse2" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="btn_Mouse2" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -453,7 +455,7 @@ icon = ExtResource("4_q8tmx")
 alignment = 0
 script = ExtResource("15_3526b")
 
-[node name="btn_Mouse3" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="btn_Mouse3" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -462,20 +464,20 @@ icon = ExtResource("4_q8tmx")
 alignment = 0
 script = ExtResource("15_3526b")
 
-[node name="keyboard-label2" type="Label" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="keyboard-label2" type="Label" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 text = "Keyboard settings"
 
-[node name="Control3" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="Control3" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 
-[node name="Control4" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="Control4" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 
-[node name="btn_keyboard" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer"]
+[node name="btn_keyboard" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -484,14 +486,14 @@ icon = ExtResource("16_whjx8")
 alignment = 0
 script = ExtResource("17_kkqhh")
 
-[node name="shortcuts" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer"]
+[node name="shortcuts" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Keyboard shortcuts"
 icon = ExtResource("18_t5yrj")
 alignment = 0
 
-[node name="btn_gamepad" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="btn_gamepad" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 text = "Gamecontroller"
@@ -500,7 +502,7 @@ alignment = 0
 script = ExtResource("19_7vpp4")
 metadata/_edit_use_anchors_ = true
 
-[node name="btn_touchpad" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer"]
+[node name="btn_touchpad" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 text = "Touchpad"
@@ -509,13 +511,12 @@ alignment = 0
 script = ExtResource("21_wjr1w")
 metadata/_edit_use_anchors_ = true
 
-[node name="output devices" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer"]
-visible = false
+[node name="output devices" type="Control" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer"]
 layout_mode = 2
 script = ExtResource("22_ulnuk")
 metadata/_tab_index = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -524,7 +525,7 @@ offset_top = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="btn_printer" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer"]
+[node name="btn_printer" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -534,7 +535,7 @@ icon = ExtResource("23_ua34p")
 alignment = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="btn_audio" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer"]
+[node name="btn_audio" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -544,7 +545,7 @@ icon = ExtResource("24_snay7")
 alignment = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="btn_kde-connect" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer"]
+[node name="btn_kde-connect" type="Button" parent="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -553,21 +554,21 @@ icon = ExtResource("25_frfsp")
 alignment = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="APPS" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="APPS" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/APPS"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/APPS"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/APPS/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/APPS/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/bold_italics_font_size = 32
@@ -578,12 +579,12 @@ theme_override_font_sizes/bold_font_size = 32
 text = "APPS"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/APPS"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/APPS"]
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("26_yw86y")
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/APPS/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -597,11 +598,11 @@ theme_override_constants/margin_top = 60
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="search_app" type="TextEdit" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/Control"]
+[node name="search_app" type="TextEdit" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/MarginContainer/Control"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -614,28 +615,28 @@ grow_horizontal = 2
 placeholder_text = "search Apps"
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/MarginContainer"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/HBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/HBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/MarginContainer/HBoxContainer/ScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="InfoText" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/HBoxContainer"]
+[node name="InfoText" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 metadata/_edit_use_anchors_ = true
 
-[node name="info_label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control"]
+[node name="info_label" type="Label" parent="main-panel/MarginContainer/hsplit-container/APPS/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.793478
@@ -651,7 +652,7 @@ theme_override_font_sizes/font_size = 16
 text = "App Information"
 metadata/_edit_use_anchors_ = true
 
-[node name="info_label2" type="Label" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control"]
+[node name="info_label2" type="Label" parent="main-panel/MarginContainer/hsplit-container/APPS/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.390487
@@ -671,18 +672,18 @@ vertical_alignment = 1
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/APPS/Control"]
 layout_mode = 1
 anchors_preset = 0
 offset_right = 285.0
 offset_bottom = 79.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/Control"]
 layout_mode = 1
 offset_right = 267.0
 offset_bottom = 101.0
 
-[node name="default_apps" type="Button" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control/VBoxContainer"]
+[node name="default_apps" type="Button" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/Control/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "Set your default apps like browser mail etc"
 text = "Set Default Apps"
@@ -690,7 +691,7 @@ icon = ExtResource("28_bav4n")
 alignment = 0
 script = ExtResource("27_1uqch")
 
-[node name="autostart" type="Button" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control/VBoxContainer"]
+[node name="autostart" type="Button" parent="main-panel/MarginContainer/hsplit-container/APPS/Control/Control/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "Choose which applications launch automatically at startup."
 text = "startup apps"
@@ -698,7 +699,7 @@ icon = ExtResource("30_pkgjl")
 alignment = 0
 script = ExtResource("27_1uqch")
 
-[node name="manage_package" type="Button" parent="main-panel/MarginContainer/HBoxContainer/APPS/Control"]
+[node name="manage_package" type="Button" parent="main-panel/MarginContainer/hsplit-container/APPS/Control"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 12
@@ -711,21 +712,21 @@ grow_vertical = 0
 text = "Package Manager"
 script = ExtResource("31_f3uth")
 
-[node name="UPDATE" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="UPDATE" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/UPDATE"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/UPDATE"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/bold_italics_font_size = 32
@@ -736,14 +737,14 @@ theme_override_font_sizes/bold_font_size = 32
 text = "UPDATE"
 horizontal_alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer"]
 layout_mode = 2
 
-[node name="check and install updates" type="Control" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer"]
+[node name="check and install updates" type="Control" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="check for update" type="Button" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates"]
+[node name="check for update" type="Button" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/check and install updates"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.645833
@@ -759,7 +760,7 @@ text = "Check for Update"
 script = ExtResource("28_rsyi7")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates"]
+[node name="Label" type="Label" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/check and install updates"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0810185
@@ -771,17 +772,17 @@ offset_bottom = 23.0
 text = "Check for available Updates"
 metadata/_edit_use_anchors_ = true
 
-[node name="configure update settings" type="Control" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer"]
+[node name="configure update settings" type="Control" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
+[node name="Label" type="Label" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Update Options"
 
-[node name="configure automatic Update" type="Button" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
+[node name="configure automatic Update" type="Button" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/configure update settings"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0196759
@@ -796,28 +797,28 @@ text = "Configure Automatic Update"
 script = ExtResource("29_hb6nx")
 metadata/_edit_use_anchors_ = true
 
-[node name="Update" type="Sprite2D" parent="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer"]
+[node name="Update" type="Sprite2D" parent="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer"]
 self_modulate = Color(0.488, 0.5036, 0.8, 0.984314)
 position = Vector2(51, 45)
 scale = Vector2(1.59375, 1.59375)
 texture = ExtResource("6_t5yrj")
 
-[node name="PERSONALIZATION" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="PERSONALIZATION" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 
-[node name="TabContainer" type="TabContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION"]
+[node name="TabContainer" type="TabContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION"]
 layout_mode = 2
 current_tab = 0
 
-[node name="theme and appearance" type="Control" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer"]
+[node name="theme and appearance" type="Control" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance"]
 layout_mode = 2
 offset_right = 804.0
 offset_bottom = 498.0
@@ -826,7 +827,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/bold_italics_font_size = 32
@@ -837,14 +838,14 @@ theme_override_font_sizes/bold_font_size = 32
 text = "PERSONALIZATION"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance"]
 layout_mode = 2
 anchors_preset = 0
 offset_right = 804.0
 offset_bottom = 498.0
 script = ExtResource("30_bo7jq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.166667
@@ -854,29 +855,29 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Dark-theme" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/HBoxContainer"]
+[node name="Dark-theme" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Dark Theme"
 
-[node name="Light-theme" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/HBoxContainer"]
+[node name="Light-theme" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Light THeme"
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("31_ejirp")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -884,7 +885,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Icon-settings" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control/VBoxContainer"]
+[node name="Icon-settings" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -892,7 +893,7 @@ text = "Icons"
 icon = ExtResource("32_tom51")
 alignment = 0
 
-[node name="font-manager" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control/VBoxContainer"]
+[node name="font-manager" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -901,7 +902,7 @@ text = "Fonts-settings
 icon = ExtResource("33_wbrxh")
 alignment = 0
 
-[node name="color" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control/VBoxContainer"]
+[node name="color" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/theme and appearance/Control/VBoxContainer/Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -910,12 +911,12 @@ text = "color
 icon = ExtResource("34_p2lge")
 alignment = 0
 
-[node name="Layout" type="Control" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer"]
+[node name="Layout" type="Control" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -923,21 +924,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer"]
+[node name="Label" type="Label" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer"]
 self_modulate = Color(1, 0, 0, 1)
 layout_mode = 2
 text = "Warning: Your pinned apps will be removed from the panels."
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer"]
 layout_mode = 2
 columns = 3
 
-[node name="Button" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+[node name="Button" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -948,7 +949,7 @@ vertical_icon_alignment = 0
 expand_icon = true
 script = ExtResource("36_puldm")
 
-[node name="Button2" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+[node name="Button2" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -959,7 +960,7 @@ vertical_icon_alignment = 0
 expand_icon = true
 script = ExtResource("38_87563")
 
-[node name="Button3" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+[node name="Button3" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -970,7 +971,7 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 script = ExtResource("40_b8vt7")
 
-[node name="Button4" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+[node name="Button4" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -981,7 +982,7 @@ vertical_icon_alignment = 0
 expand_icon = true
 script = ExtResource("42_a41q5")
 
-[node name="Button5" type="Button" parent="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+[node name="Button5" type="Button" parent="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -992,21 +993,21 @@ vertical_icon_alignment = 0
 expand_icon = true
 script = ExtResource("44_moqjb")
 
-[node name="Language_And_Locals" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="Language_And_Locals" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/default_color = Color(0.701991, 0.717632, 0.910109, 1)
@@ -1018,11 +1019,11 @@ theme_override_font_sizes/bold_font_size = 32
 text = "PERSONALIZATION"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals"]
 layout_mode = 2
 script = ExtResource("45_im8yo")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0272727
@@ -1033,12 +1034,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="vBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer"]
+[node name="vBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals/Control/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
 
-[node name="btn_Region and Language" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
+[node name="btn_Region and Language" type="Button" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -1046,7 +1047,7 @@ text = "Region and Language"
 icon = ExtResource("46_75uwb")
 alignment = 0
 
-[node name="btn_Spell_Checking" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
+[node name="btn_Spell_Checking" type="Button" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -1054,7 +1055,7 @@ text = "Spell Checking"
 icon = ExtResource("47_epjfw")
 alignment = 0
 
-[node name="btn_Spell_Checking2" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
+[node name="btn_Spell_Checking2" type="Button" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -1062,7 +1063,7 @@ text = "Add Language for Typing"
 icon = ExtResource("52_8h8qr")
 alignment = 0
 
-[node name="btn_Date_And_Time" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
+[node name="btn_Date_And_Time" type="Button" parent="main-panel/MarginContainer/hsplit-container/Language_And_Locals/Control/VBoxContainer/vBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -1070,20 +1071,20 @@ text = "Date And Time"
 icon = ExtResource("48_cpg8b")
 alignment = 0
 
-[node name="Network" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="Network" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/Network"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/Network"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/Network/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/Network/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/default_color = Color(0.701991, 0.717632, 0.910109, 1)
@@ -1095,10 +1096,10 @@ theme_override_font_sizes/bold_font_size = 32
 text = "Network And Connections"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/Network"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/Network"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/Network/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/Network/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1107,7 +1108,7 @@ offset_top = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Connections" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Network/Control/VBoxContainer"]
+[node name="Connections" type="Button" parent="main-panel/MarginContainer/hsplit-container/Network/Control/VBoxContainer"]
 layout_mode = 2
 text = "Connections"
 icon = ExtResource("10_8h8qr")
@@ -1115,7 +1116,7 @@ alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Connections2" type="Button" parent="main-panel/MarginContainer/HBoxContainer/Network/Control/VBoxContainer"]
+[node name="Connections2" type="Button" parent="main-panel/MarginContainer/hsplit-container/Network/Control/VBoxContainer"]
 layout_mode = 2
 text = "Proxy
 "
@@ -1123,13 +1124,12 @@ icon = ExtResource("49_xryqn")
 alignment = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="About" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="About" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/About"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/About"]
 visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 20
@@ -1137,7 +1137,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/About/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/About/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/default_color = Color(0.701991, 0.717632, 0.910109, 1)
@@ -1149,10 +1149,10 @@ theme_override_font_sizes/bold_font_size = 32
 text = "Network And Connections"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/About"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/About"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/About/Control"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/About/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1164,11 +1164,11 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="about_text" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/About/Control/MarginContainer"]
+[node name="about_text" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/About/Control/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="btn_fullabout" type="Button" parent="main-panel/MarginContainer/HBoxContainer/About/Control"]
+[node name="btn_fullabout" type="Button" parent="main-panel/MarginContainer/hsplit-container/About/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -1183,20 +1183,20 @@ grow_vertical = 0
 text = "more Info"
 metadata/_edit_use_anchors_ = true
 
-[node name="User_And_Accounts" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="User_And_Accounts" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/User_And_Accounts"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/User_And_Accounts"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/User_And_Accounts/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/default_color = Color(0.701991, 0.717632, 0.910109, 1)
@@ -1208,16 +1208,17 @@ theme_override_font_sizes/bold_font_size = 32
 text = "User settings and Acoounts"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/User_And_Accounts"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/User_And_Accounts"]
+visible = false
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/User_And_Accounts/Control"]
 layout_mode = 2
 offset_top = 94.0
 offset_right = 904.0
 offset_bottom = 598.0
 
-[node name="btn_Users" type="Button" parent="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer"]
+[node name="btn_Users" type="Button" parent="main-panel/MarginContainer/hsplit-container/User_And_Accounts/Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -1226,7 +1227,7 @@ text = "Users"
 icon = ExtResource("8_pkgjl")
 alignment = 0
 
-[node name="btn_accounts" type="Button" parent="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer"]
+[node name="btn_accounts" type="Button" parent="main-panel/MarginContainer/hsplit-container/User_And_Accounts/Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -1236,7 +1237,7 @@ icon = ExtResource("50_q8tmx")
 alignment = 0
 expand_icon = true
 
-[node name="btn_kde_wallet" type="Button" parent="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer"]
+[node name="btn_kde_wallet" type="Button" parent="main-panel/MarginContainer/hsplit-container/User_And_Accounts/Control/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
@@ -1246,20 +1247,20 @@ icon = ExtResource("51_fw7gh")
 alignment = 0
 expand_icon = true
 
-[node name="power_settings" type="PanelContainer" parent="main-panel/MarginContainer/HBoxContainer"]
+[node name="power_settings" type="PanelContainer" parent="main-panel/MarginContainer/hsplit-container"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/HBoxContainer/power_settings"]
+[node name="MarginContainer" type="MarginContainer" parent="main-panel/MarginContainer/hsplit-container/power_settings"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/HBoxContainer/power_settings/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="main-panel/MarginContainer/hsplit-container/power_settings/MarginContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/default_color = Color(0.701991, 0.717632, 0.910109, 1)
@@ -1271,16 +1272,16 @@ theme_override_font_sizes/bold_font_size = 32
 text = "Power Settings"
 horizontal_alignment = 2
 
-[node name="Control" type="Control" parent="main-panel/MarginContainer/HBoxContainer/power_settings"]
+[node name="Control" type="Control" parent="main-panel/MarginContainer/hsplit-container/power_settings"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="main-panel/MarginContainer/hsplit-container/power_settings/Control"]
 layout_mode = 2
 offset_top = 94.0
 offset_right = 904.0
 offset_bottom = 598.0
 
-[node name="btn_power_saving" type="Button" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer"]
+[node name="btn_power_saving" type="Button" parent="main-panel/MarginContainer/hsplit-container/power_settings/Control/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("2_jqaei")
@@ -1288,7 +1289,7 @@ text = "energy saving"
 icon = ExtResource("11_s4ix2")
 alignment = 0
 
-[node name="btn_activity_power_settings" type="Button" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer"]
+[node name="btn_activity_power_settings" type="Button" parent="main-panel/MarginContainer/hsplit-container/power_settings/Control/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("2_jqaei")
@@ -1297,7 +1298,7 @@ icon = ExtResource("58_vj7tl")
 alignment = 0
 expand_icon = true
 
-[node name="btn_advanced_power_settigns" type="Button" parent="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer"]
+[node name="btn_advanced_power_settigns" type="Button" parent="main-panel/MarginContainer/hsplit-container/power_settings/Control/VBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("2_jqaei")
@@ -1307,6 +1308,7 @@ alignment = 0
 expand_icon = true
 
 [node name="header" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 50.0
@@ -1362,41 +1364,41 @@ text = "should settings app always stay  dark?"
 unique_name_in_owner = true
 layout_mode = 2
 
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/settings-panel-margin/settings_panel/VBoxContainer/Button10" to="main-panel/MarginContainer" method="_on_button_10_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/all settings" method="_on_pressed"]
-[connection signal="value_changed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS/HSlider" to="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control" method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Display/MarginContainer/Control/btn_nvidia-settings" to="main-panel/MarginContainer" method="_on_btn_nvidiasettings_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse2" to="main-panel/MarginContainer" method="_on_btn_mouse_2_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse3" to="main-panel/MarginContainer" method="_on_btn_mouse_3_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/shortcuts" to="main-panel/MarginContainer" method="_on_shortcuts_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_gamepad" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_gamepad" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_touchpad" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/input devices/VBoxContainer/btn_touchpad" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer/btn_printer" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer/btn_printer" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer/btn_audio" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer/btn_audio" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer/btn_kde-connect" to="main-panel/MarginContainer/HBoxContainer/Inputs/TabContainer/output devices/VBoxContainer/btn_kde-connect" method="_on_pressed"]
-[connection signal="text_changed" from="main-panel/MarginContainer/HBoxContainer/APPS/Control/MarginContainer/Control/search_app" to="main-panel/MarginContainer/HBoxContainer/APPS/Control" method="_on_search_app_text_changed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control/VBoxContainer/default_apps" to="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control/VBoxContainer/default_apps" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/APPS/Control/Control/VBoxContainer/autostart" to="main-panel/MarginContainer" method="_on_autostart_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" to="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings/configure automatic Update" to="main-panel/MarginContainer/HBoxContainer/UPDATE/MarginContainer/VBoxContainer/configure update settings/configure automatic Update" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" to="main-panel/MarginContainer/HBoxContainer/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" method="_on_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Language_And_Locals/Control/VBoxContainer/vBoxContainer/btn_Spell_Checking2" to="main-panel/MarginContainer" method="_on_btn_spell_checking_2_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Network/Control/VBoxContainer/Connections" to="main-panel/MarginContainer" method="_on_connections_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/Network/Control/VBoxContainer/Connections2" to="main-panel/MarginContainer" method="_on_connections_2_pressed"]
-[connection signal="ready" from="main-panel/MarginContainer/HBoxContainer/About/Control/MarginContainer/about_text" to="main-panel/MarginContainer" method="_on_about_text_ready"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/About/Control/btn_fullabout" to="main-panel/MarginContainer" method="_on_btn_fullabout_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer/btn_Users" to="main-panel/MarginContainer" method="_on_btn_users_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer/btn_accounts" to="main-panel/MarginContainer" method="_on_btn_accounts_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/User_And_Accounts/Control/VBoxContainer/btn_kde_wallet" to="main-panel/MarginContainer" method="_on_btn_kde_wallet_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer/btn_power_saving" to="main-panel/MarginContainer" method="_on_btn_power_saving_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer/btn_activity_power_settings" to="main-panel/MarginContainer" method="_on_btn_activity_power_settings_pressed"]
-[connection signal="pressed" from="main-panel/MarginContainer/HBoxContainer/power_settings/Control/VBoxContainer/btn_advanced_power_settigns" to="main-panel/MarginContainer" method="_on_btn_advanced_power_settigns_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/settings-panel-margin/settings_panel/VBoxContainer/Button10" to="main-panel/MarginContainer" method="_on_button_10_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/all settings" to="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/all settings" method="_on_pressed"]
+[connection signal="value_changed" from="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/VBoxContainer/BRIGTHNESS/HSlider" to="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Display/MarginContainer/Control/btn_nvidia-settings" to="main-panel/MarginContainer" method="_on_btn_nvidiasettings_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" to="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/btn_Mouse" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse2" to="main-panel/MarginContainer" method="_on_btn_mouse_2_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/VBoxContainer/HBoxContainer/btn_Mouse3" to="main-panel/MarginContainer" method="_on_btn_mouse_3_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" to="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/btn_keyboard" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/HBoxContainer/shortcuts" to="main-panel/MarginContainer" method="_on_shortcuts_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/btn_gamepad" to="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/btn_gamepad" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/btn_touchpad" to="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/input devices/VBoxContainer/btn_touchpad" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer/btn_printer" to="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer/btn_printer" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer/btn_audio" to="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer/btn_audio" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer/btn_kde-connect" to="main-panel/MarginContainer/hsplit-container/Inputs/TabContainer/output devices/VBoxContainer/btn_kde-connect" method="_on_pressed"]
+[connection signal="text_changed" from="main-panel/MarginContainer/hsplit-container/APPS/Control/MarginContainer/Control/search_app" to="main-panel/MarginContainer/hsplit-container/APPS/Control" method="_on_search_app_text_changed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/APPS/Control/Control/VBoxContainer/default_apps" to="main-panel/MarginContainer/hsplit-container/APPS/Control/Control/VBoxContainer/default_apps" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/APPS/Control/Control/VBoxContainer/autostart" to="main-panel/MarginContainer" method="_on_autostart_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" to="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/check and install updates/check for update" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/configure update settings/configure automatic Update" to="main-panel/MarginContainer/hsplit-container/UPDATE/MarginContainer/VBoxContainer/configure update settings/configure automatic Update" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" to="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" to="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" to="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" to="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" to="main-panel/MarginContainer/hsplit-container/PERSONALIZATION/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" method="_on_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Language_And_Locals/Control/VBoxContainer/vBoxContainer/btn_Spell_Checking2" to="main-panel/MarginContainer" method="_on_btn_spell_checking_2_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Network/Control/VBoxContainer/Connections" to="main-panel/MarginContainer" method="_on_connections_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/Network/Control/VBoxContainer/Connections2" to="main-panel/MarginContainer" method="_on_connections_2_pressed"]
+[connection signal="ready" from="main-panel/MarginContainer/hsplit-container/About/Control/MarginContainer/about_text" to="main-panel/MarginContainer" method="_on_about_text_ready"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/About/Control/btn_fullabout" to="main-panel/MarginContainer" method="_on_btn_fullabout_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/User_And_Accounts/Control/VBoxContainer/btn_Users" to="main-panel/MarginContainer" method="_on_btn_users_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/User_And_Accounts/Control/VBoxContainer/btn_accounts" to="main-panel/MarginContainer" method="_on_btn_accounts_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/User_And_Accounts/Control/VBoxContainer/btn_kde_wallet" to="main-panel/MarginContainer" method="_on_btn_kde_wallet_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/power_settings/Control/VBoxContainer/btn_power_saving" to="main-panel/MarginContainer" method="_on_btn_power_saving_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/power_settings/Control/VBoxContainer/btn_activity_power_settings" to="main-panel/MarginContainer" method="_on_btn_activity_power_settings_pressed"]
+[connection signal="pressed" from="main-panel/MarginContainer/hsplit-container/power_settings/Control/VBoxContainer/btn_advanced_power_settigns" to="main-panel/MarginContainer" method="_on_btn_advanced_power_settigns_pressed"]
 [connection signal="gui_input" from="header" to="header" method="_on_gui_input"]
 [connection signal="pressed" from="header/cross" to="header" method="_on_cross_pressed"]
 [connection signal="pressed" from="header/minimize" to="header" method="_on_minimize_pressed"]

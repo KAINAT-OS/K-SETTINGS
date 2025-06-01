@@ -1,0 +1,133 @@
+[gd_scene load_steps=7 format=3 uid="uid://cabq54r5mf3cj"]
+
+[ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_poqq2"]
+[ext_resource type="ButtonGroup" uid="uid://brhgx3wrnk6jb" path="res://main-bg.tres" id="2_0aa7f"]
+[ext_resource type="Texture2D" uid="uid://c646klw30y8jh" path="res://user.png" id="3_akrpu"]
+[ext_resource type="Texture2D" uid="uid://sykbimmcmbyn" path="res://logos-and-icons/online-symbolic.svg" id="4_2qe82"]
+[ext_resource type="Texture2D" uid="uid://dnerlyviv3rql" path="res://logos-and-icons/wallet.svg" id="5_rn6hq"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" parent="." instance=ExtResource("1_poqq2")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="DISPLAY" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="0"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="INPUT_AND_OUTPUTS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="1"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="APPS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="2"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="UPDATES" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="3"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="PERSONALIZATION" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="4"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="USERS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="5"]
+button_pressed = true
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="LANGUAGE_AND_LOCALS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="6"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="NETWORK_AND_CONNECTIONS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="7"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "USERS  "
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 0
+
+[node name="Control" type="Control" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btn_Users" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_0aa7f")
+text = "Users"
+icon = ExtResource("3_akrpu")
+alignment = 0
+
+[node name="btn_accounts" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_0aa7f")
+text = "Online accounts"
+icon = ExtResource("4_2qe82")
+alignment = 0
+expand_icon = true
+
+[node name="btn_kde_wallet" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_0aa7f")
+text = "wallet(password manager)"
+icon = ExtResource("5_rn6hq")
+alignment = 0
+expand_icon = true
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/btn_Users" to="Control" method="_on_btn_users_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/btn_accounts" to="Control" method="_on_btn_accounts_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/btn_kde_wallet" to="Control" method="_on_btn_kde_wallet_pressed"]
+
+[editable path="Control"]
+[editable path="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]

@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://dxhjmdogbed6a"]
+
+[ext_resource type="ButtonGroup" uid="uid://bug3geelul8vv" path="res://btn-groups/tabs.tres" id="1_tmpr7"]
+[ext_resource type="Texture2D" uid="uid://d0kwgh7fpgmj5" path="res://monitor.png" id="2_gbblg"]
+[ext_resource type="Texture2D" uid="uid://bha2myasx0k13" path="res://mouse.png" id="3_ffqux"]
+[ext_resource type="Texture2D" uid="uid://c7hmjij120mh" path="res://packages.png" id="4_0apld"]
+[ext_resource type="Texture2D" uid="uid://drwppcii6877c" path="res://update.png" id="5_elqjv"]
+[ext_resource type="Texture2D" uid="uid://dop1lab2sjnvs" path="res://brush.png" id="6_ffqux"]
+[ext_resource type="Texture2D" uid="uid://c646klw30y8jh" path="res://user.png" id="7_y8q7g"]
+[ext_resource type="Texture2D" uid="uid://djqjb0wi6ptyd" path="res://language.png" id="8_w2tqf"]
+[ext_resource type="Texture2D" uid="uid://dhfeiuq3m274e" path="res://network.png" id="9_3f1e3"]
+[ext_resource type="Texture2D" uid="uid://dkudmft38obeu" path="res://logos-and-icons/preferences-system-power-management.svg" id="10_krva6"]
+[ext_resource type="Texture2D" uid="uid://c2cdp3dadqbad" path="res://about.png" id="11_xx40h"]
+
+[node name="tabs" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DISPLAY" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Display"
+icon = ExtResource("2_gbblg")
+
+[node name="INPUT_AND_OUTPUTS" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Input and Output"
+icon = ExtResource("3_ffqux")
+
+[node name="APPS" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Apps"
+icon = ExtResource("4_0apld")
+
+[node name="UPDATES" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Updates"
+icon = ExtResource("5_elqjv")
+
+[node name="PERSONALIZATION" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Personalization"
+icon = ExtResource("6_ffqux")
+
+[node name="USERS" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Users"
+icon = ExtResource("7_y8q7g")
+
+[node name="LANGUAGE_AND_LOCALS" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Language And Locals"
+icon = ExtResource("8_w2tqf")
+
+[node name="NETWORK_AND_CONNECTIONS" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Network And Connections"
+icon = ExtResource("9_3f1e3")
+
+[node name="POWER_SETTINGS" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "Power Settings"
+icon = ExtResource("10_krva6")
+
+[node name="ABOUT" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "About"
+icon = ExtResource("11_xx40h")

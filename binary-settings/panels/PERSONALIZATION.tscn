@@ -1,0 +1,263 @@
+[gd_scene load_steps=18 format=3 uid="uid://4jj4xhfcwrb2"]
+
+[ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_utxo4"]
+[ext_resource type="Script" uid="uid://bfs6x7cttmt0n" path="res://theme-setter.gd" id="2_87qrf"]
+[ext_resource type="Script" uid="uid://c63yjkbjd8be1" path="res://personalization-launchers.gd" id="3_syuyx"]
+[ext_resource type="Texture2D" uid="uid://vttsho5bggsg" path="res://preferences-desktop-icons.svg" id="4_w0a1s"]
+[ext_resource type="Texture2D" uid="uid://cyk0hgo23lqpr" path="res://preferences-desktop-font.svg" id="5_okhwm"]
+[ext_resource type="Texture2D" uid="uid://cu3f3jrin2a72" path="res://preferences-desktop-color.svg" id="6_ec33m"]
+[ext_resource type="Texture2D" uid="uid://bm3irbjj43pxc" path="res://logos-and-icons/KOS-tabber.svg" id="7_oaxlq"]
+[ext_resource type="Script" uid="uid://bqbm06w87hok7" path="res://kos_tabber.gd" id="8_lj4v3"]
+[ext_resource type="Texture2D" uid="uid://dsrh4438ugb61" path="res://logos-and-icons/KOS-mc.svg" id="9_c11ly"]
+[ext_resource type="Script" uid="uid://blwu5hn6kv6pg" path="res://kos_mc.gd" id="10_2pcd1"]
+[ext_resource type="Texture2D" uid="uid://dk2rfmpaiu3uv" path="res://logos-and-icons/dos10.svg" id="11_ocbua"]
+[ext_resource type="Script" uid="uid://cmwc0d35ap5a0" path="res://kos_dos_10.gd" id="12_oqf8v"]
+[ext_resource type="Texture2D" uid="uid://dsimr04d3pf13" path="res://logos-and-icons/dos11.svg" id="13_g7yfo"]
+[ext_resource type="Script" uid="uid://caep0qeqbhvd1" path="res://kos_dos_11.gd" id="14_0uwlm"]
+[ext_resource type="Texture2D" uid="uid://o1eq5vdivxua" path="res://logos-and-icons/KOS-unity.svg" id="15_jx70a"]
+[ext_resource type="Script" uid="uid://djoqm8qnjujn0" path="res://kos_unity.gd" id="16_avcd2"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" parent="." instance=ExtResource("1_utxo4")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="DISPLAY" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="0"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="INPUT_AND_OUTPUTS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="1"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="APPS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="2"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="UPDATES" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="3"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="PERSONALIZATION" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="4"]
+button_pressed = true
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="USERS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="5"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="LANGUAGE_AND_LOCALS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="6"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="NETWORK_AND_CONNECTIONS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="7"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "PERSONALIZATION"
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 25
+
+[node name="TabContainer" type="TabContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer"]
+layout_mode = 2
+current_tab = 1
+
+[node name="THEME AND APPEARANCE" type="Control" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("2_87qrf")
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Dark-theme" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Dark theme 🌒"
+
+[node name="Light-theme" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Light Theme ☀️"
+
+[node name="Control" type="Control" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_syuyx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon-settings" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Icons"
+icon = ExtResource("4_w0a1s")
+alignment = 0
+
+[node name="font-manager" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Fonts-settings
+"
+icon = ExtResource("5_okhwm")
+alignment = 0
+
+[node name="color" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/THEME AND APPEARANCE/VBoxContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "color
+"
+icon = ExtResource("6_ec33m")
+alignment = 0
+
+[node name="Layout" type="Control" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer"]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "Warning: Your pinned apps will be removed from the panels."
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Button" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KOS TABBER"
+icon = ExtResource("7_oaxlq")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("8_lj4v3")
+
+[node name="Button2" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KOS MC"
+icon = ExtResource("9_c11ly")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("10_2pcd1")
+
+[node name="Button3" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "DOS 10"
+icon = ExtResource("11_ocbua")
+clip_text = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("12_oqf8v")
+
+[node name="Button4" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "DOS 11"
+icon = ExtResource("13_g7yfo")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("14_0uwlm")
+
+[node name="Button5" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "KOS Unity"
+icon = ExtResource("15_jx70a")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("16_avcd2")
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/TabContainer/Layout/VBoxContainer/MarginContainer/GridContainer/Button5" method="_on_pressed"]
+
+[editable path="Control"]
+[editable path="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]

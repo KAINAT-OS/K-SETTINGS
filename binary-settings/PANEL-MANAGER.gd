@@ -143,8 +143,7 @@ func _on_autostart_pressed() -> void:
 	OS.execute("kcmshell5",["kcm_autostart"])
 
 
-func _on_btn_spell_checking_2_pressed() -> void:
-	OS.execute("ibus-setup",[])
+
 
 
 func _on_btn_mouse_2_pressed() -> void:

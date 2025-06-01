@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6lk2ttta6w66"]
+
+[ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_dxjyy"]
+[ext_resource type="Script" uid="uid://bjarbsmfegooe" path="res://locals.gd" id="2_tdkfs"]
+[ext_resource type="Texture2D" uid="uid://bc7qdieneugph" path="res://amarok_change_language.svg" id="3_8bwu4"]
+[ext_resource type="Texture2D" uid="uid://cmnipubex0cyb" path="res://tools-check-spelling.png" id="4_sjdoa"]
+[ext_resource type="Texture2D" uid="uid://crklc00ln57ue" path="res://logos-and-icons/ibus-setup-hangul.png" id="5_j6fs5"]
+[ext_resource type="Texture2D" uid="uid://c5owytqj4ipgs" path="res://yast-timezone.svg" id="6_odfxt"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" parent="." instance=ExtResource("1_dxjyy")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="DISPLAY" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="0"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="INPUT_AND_OUTPUTS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="1"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="APPS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="2"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="UPDATES" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="3"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="PERSONALIZATION" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="4"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="USERS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="5"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="LANGUAGE_AND_LOCALS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="6"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="NETWORK_AND_CONNECTIONS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="7"]
+button_pressed = true
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "LANGUAGE AND LOCAL "
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer"]
+layout_mode = 2
+script = ExtResource("2_tdkfs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0272727
+anchor_top = 0.166667
+anchor_right = 0.969318
+anchor_bottom = 0.959839
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="vBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="btn_Region and Language" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/vBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Region and Language"
+icon = ExtResource("3_8bwu4")
+alignment = 0
+
+[node name="btn_Spell_Checking" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/vBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Spell Checking"
+icon = ExtResource("4_sjdoa")
+alignment = 0
+
+[node name="BTN_ADD_LANGUAGE" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/vBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Add Language for Typing"
+icon = ExtResource("5_j6fs5")
+alignment = 0
+
+[node name="btn_Date_And_Time" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/vBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Date And Time"
+icon = ExtResource("6_odfxt")
+alignment = 0
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/vBoxContainer/BTN_ADD_LANGUAGE" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control" method="_on_btn_add_language_pressed"]
+
+[editable path="Control"]
+[editable path="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]

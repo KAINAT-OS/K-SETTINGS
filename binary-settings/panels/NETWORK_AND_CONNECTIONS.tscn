@@ -1,0 +1,116 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl1ij66rdlptu"]
+
+[ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_soy20"]
+[ext_resource type="Texture2D" uid="uid://dhfeiuq3m274e" path="res://network.png" id="2_1f2fv"]
+[ext_resource type="Texture2D" uid="uid://ckqm8n1xn46ns" path="res://proxy.png" id="3_aiof8"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" parent="." instance=ExtResource("1_soy20")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="DISPLAY" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="0"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="INPUT_AND_OUTPUTS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="1"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="APPS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="2"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="UPDATES" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="3"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="PERSONALIZATION" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="4"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="USERS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="5"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="LANGUAGE_AND_LOCALS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="6"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="NETWORK_AND_CONNECTIONS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="7"]
+button_pressed = true
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "NETWORK "
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Connections" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+text = "Connections"
+icon = ExtResource("2_1f2fv")
+alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Connections2" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+text = "Proxy
+"
+icon = ExtResource("3_aiof8")
+alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/Connections" to="Control" method="_on_connections_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/Connections2" to="Control" method="_on_connections_2_pressed"]
+
+[editable path="Control"]
+[editable path="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]

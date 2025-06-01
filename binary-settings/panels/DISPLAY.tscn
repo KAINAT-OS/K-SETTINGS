@@ -1,0 +1,220 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnepeunttit34"]
+
+[ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="2_fvcql"]
+[ext_resource type="Script" uid="uid://cb1nu3t8ji7x5" path="res://Display-control.gd" id="2_oiqyp"]
+[ext_resource type="Script" uid="uid://c67jtsbqle46e" path="res://advance-display.gd" id="3_hss4f"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" parent="." instance=ExtResource("2_fvcql")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="DISPLAY" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="0"]
+button_pressed = true
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="INPUT_AND_OUTPUTS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="1"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="APPS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="2"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="UPDATES" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="3"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="PERSONALIZATION" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="4"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="USERS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="5"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="LANGUAGE_AND_LOCALS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="6"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="NETWORK_AND_CONNECTIONS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="7"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_h4w2g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "DISPLAY"
+horizontal_alignment = 2
+
+[node name="Control2" type="Control" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_oiqyp")
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34375
+anchor_top = 0.0394265
+anchor_right = 0.34375
+anchor_bottom = 0.0860215
+offset_left = -242.0
+offset_right = 242.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Here are some basic display settings:
+Choose your display and resolution."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="all settings" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -99.0
+offset_top = -31.0
+offset_right = 99.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Advance display settings"
+script = ExtResource("3_hss4f")
+
+[node name="apply" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.888636
+anchor_top = 0.864629
+anchor_right = 0.888636
+anchor_bottom = 0.866812
+offset_right = 56.0
+offset_bottom = 30.0
+text = "Apply"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0671296
+anchor_top = 0.16129
+anchor_right = 0.689815
+anchor_bottom = 0.693548
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dISPLAY" type="HBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/dISPLAY"]
+layout_mode = 2
+text = "Display:"
+
+[node name="MonitorDropdown" type="OptionButton" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/dISPLAY"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RESULATION" type="HBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/RESULATION"]
+layout_mode = 2
+text = "resolution:"
+
+[node name="ResolutionDropdown" type="OptionButton" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/RESULATION"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RATE" type="HBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/RATE"]
+layout_mode = 2
+text = "refresh rate"
+
+[node name="RT_Dropdown" type="OptionButton" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/RATE"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BRIGTHNESS" type="HBoxContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/BRIGTHNESS"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "brightness"
+
+[node name="HSlider" type="HSlider" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/BRIGTHNESS"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.05
+max_value = 1.0
+step = 0.01
+value = 0.95
+
+[node name="bdis" type="Label" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/BRIGTHNESS"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_nvidia-settings" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.729391
+anchor_right = 1.0
+anchor_bottom = 0.729391
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nvidia-settings"
+alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/all settings" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/all settings" method="_on_pressed"]
+[connection signal="value_changed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/VBoxContainer/BRIGTHNESS/HSlider" to="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/Control2/btn_nvidia-settings" to="Control" method="_on_btn_nvidiasettings_pressed"]
+
+[editable path="Control"]
+[editable path="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]

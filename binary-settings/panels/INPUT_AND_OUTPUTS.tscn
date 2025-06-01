@@ -1,0 +1,296 @@
+[gd_scene load_steps=20 format=3 uid="uid://2k13cx0wei8t"]
+
+[ext_resource type="Script" uid="uid://3mdrplok8fmb" path="res://new_settings_app.gd" id="1_faa5f"]
+[ext_resource type="PackedScene" uid="uid://dxhjmdogbed6a" path="res://scenes/tabs.tscn" id="2_jxtir"]
+[ext_resource type="Texture2D" uid="uid://bha2myasx0k13" path="res://mouse.png" id="3_vdcqi"]
+[ext_resource type="Script" uid="uid://q3r0b7h07kk3" path="res://panels/mouse_settings.gd" id="4_pum3a"]
+[ext_resource type="Texture2D" uid="uid://tmlwbfem5j6s" path="res://keyboard.png" id="5_6iy5q"]
+[ext_resource type="Script" uid="uid://bt85s68n8p3dr" path="res://panels/mouse-one-click.gd" id="5_pq1aq"]
+[ext_resource type="Script" uid="uid://dvspevb6kb014" path="res://keyboard_settings.gd" id="6_7k0qb"]
+[ext_resource type="Texture2D" uid="uid://b18fqsayb6y4u" path="res://logos-and-icons/keyboard-shortcuts-symbolic.svg" id="7_rqmh3"]
+[ext_resource type="Texture2D" uid="uid://b0slo8x0skxfr" path="res://gamepad.png" id="8_xycpq"]
+[ext_resource type="Script" uid="uid://bvhexmg8x7puy" path="res://panels/shortcuts.gd" id="9_klbix"]
+[ext_resource type="Script" uid="uid://bb4m16qmy5px1" path="res://gamepad_settings.gd" id="9_uqjw6"]
+[ext_resource type="Texture2D" uid="uid://b3jvvjgg7putc" path="res://input-touchpad-symbolic.png" id="10_0memy"]
+[ext_resource type="Script" uid="uid://ckhncpy1l6s0h" path="res://btn_touchpad.gd" id="11_5pi1e"]
+[ext_resource type="Script" uid="uid://c6bsentnc1vqd" path="res://output_devices.gd" id="12_fr4n4"]
+[ext_resource type="Texture2D" uid="uid://c13hqyjp3ye0o" path="res://yast-printer.svg" id="13_hfcdw"]
+[ext_resource type="Texture2D" uid="uid://dc1tnpx7u73rt" path="res://preferences-desktop-sound.svg" id="14_n7iti"]
+[ext_resource type="Texture2D" uid="uid://4u34yc8wlb6s" path="res://kdeconnect-symbolic.png" id="15_2m458"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdioh"]
+bg_color = Color(0.1159, 0.119605, 0.19, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_faa5f"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_faa5f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.05
+theme_override_styles/panel = SubResource("StyleBoxFlat_mdioh")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="left-panel" type="Panel" parent="Panel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="tabs" parent="Panel/VBoxContainer/HSplitContainer/left-panel" instance=ExtResource("2_jxtir")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="DISPLAY" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="0"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="INPUT_AND_OUTPUTS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="1"]
+button_pressed = true
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="APPS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="2"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="UPDATES" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="3"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="PERSONALIZATION" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="4"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="USERS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="5"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="LANGUAGE_AND_LOCALS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="6"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="NETWORK_AND_CONNECTIONS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="7"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="POWER_SETTINGS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="ABOUT" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_faa5f")
+
+[node name="right-panel" type="Panel" parent="Panel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HSplitContainer/right-panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+text = "INPUTS AND OUTPUTS"
+horizontal_alignment = 2
+
+[node name="TabContainer" type="TabContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.103873
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="input devices" type="Control" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="vbox" type="VBoxContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mouse" type="VBoxContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Mouse:"
+
+[node name="mouse-settings" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse"]
+layout_mode = 2
+text = "Mouse settings"
+icon = ExtResource("3_vdcqi")
+alignment = 0
+script = ExtResource("4_pum3a")
+
+[node name="CheckBox" type="CheckBox" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "one click to open files"
+script = ExtResource("5_pq1aq")
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse"]
+layout_mode = 2
+text = "Gaming Mouse:"
+
+[node name="gaming-mouse" type="Control" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/gaming-mouse"]
+layout_mode = 2
+offset_right = 503.0
+offset_bottom = 31.0
+
+[node name="piper" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/gaming-mouse/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.43, 0.2365, 0.2365, 1)
+text = "Generic Gaming Mouse Settings"
+icon = ExtResource("3_vdcqi")
+alignment = 0
+
+[node name="razer" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/gaming-mouse/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Razer Gaming Mouse Settings"
+alignment = 0
+
+[node name="keyboard and others" type="VBoxContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others"]
+layout_mode = 2
+
+[node name="keyboard" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/HBoxContainer"]
+layout_mode = 2
+text = "Keyboard Settings"
+icon = ExtResource("5_6iy5q")
+alignment = 0
+script = ExtResource("6_7k0qb")
+
+[node name="shortcuts" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Keyboard shortcuts"
+icon = ExtResource("7_rqmh3")
+alignment = 0
+script = ExtResource("9_klbix")
+
+[node name="btn_gamepad" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Gamecontroller"
+icon = ExtResource("8_xycpq")
+alignment = 0
+script = ExtResource("9_uqjw6")
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_touchpad" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Touchpad"
+icon = ExtResource("10_0memy")
+alignment = 0
+script = ExtResource("11_5pi1e")
+metadata/_edit_use_anchors_ = true
+
+[node name="output devices" type="Control" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("12_fr4n4")
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btn_printer" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+tooltip_text = "Printer settings"
+text = "Printers"
+icon = ExtResource("13_hfcdw")
+alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_audio" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+tooltip_text = "Audio settings"
+text = "Audio"
+icon = ExtResource("14_n7iti")
+alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_kde-connect" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Kde Connect"
+icon = ExtResource("15_2m458")
+alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/mouse-settings" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/mouse-settings" method="_on_pressed"]
+[connection signal="toggled" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/CheckBox" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/CheckBox" method="_on_toggled"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/gaming-mouse/HBoxContainer/piper" to="." method="_on_piper_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/HBoxContainer/keyboard" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/HBoxContainer/keyboard" method="_on_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/HBoxContainer/shortcuts" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/HBoxContainer/shortcuts" method="_on_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/btn_gamepad" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/btn_gamepad" method="_on_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/btn_touchpad" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/keyboard and others/btn_touchpad" method="_on_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer/btn_printer" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer/btn_printer" method="_on_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer/btn_audio" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer/btn_audio" method="_on_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer/btn_kde-connect" to="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/output devices/VBoxContainer/btn_kde-connect" method="_on_pressed"]
+
+[editable path="Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]

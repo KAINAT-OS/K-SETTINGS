@@ -7,7 +7,7 @@ bg_color = Color(0.129458, 0.133364, 0.211521, 1)
 bg_color = Color(0.125536, 0.129458, 0.207614, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3luov"]
-bg_color = Color(0.061, 0.06295, 0.1, 1)
+bg_color = Color(0.1525, 0.157375, 0.25, 1)
 
 [sub_resource type="Image" id="Image_oaqtb"]
 data = {
@@ -1523,13 +1523,13 @@ data = {
 image = SubResource("Image_4odht")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgkdc"]
-bg_color = Color(0.117235, 0.121141, 0.191974, 1)
+bg_color = Color(0.1159, 0.119605, 0.19, 0.498039)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1cel"]
 bg_color = Color(0.046891, 0.046891, 0.0742504, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4odht"]
-bg_color = Color(0.046891, 0.046891, 0.0742504, 1)
+bg_color = Color(0.061, 0.06295, 0.1, 1)
 
 [resource]
 Button/colors/icon_hover_color = Color(0.258915, 0.772824, 0.968734, 1)
@@ -1537,6 +1537,10 @@ Button/colors/icon_normal_color = Color(0.61, 0.6295, 1, 1)
 Button/styles/focus = SubResource("StyleBoxFlat_0wx3w")
 Button/styles/hover = SubResource("StyleBoxFlat_oaqtb")
 Button/styles/normal = SubResource("StyleBoxFlat_3luov")
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
 OptionButton/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 OptionButton/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 OptionButton/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)

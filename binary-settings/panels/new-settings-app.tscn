@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2dtf22jre3an"]
+
+[ext_resource type="Script" uid="uid://3mdrplok8fmb" path="res://new_settings_app.gd" id="1_mdioh"]
+[ext_resource type="PackedScene" uid="uid://dxhjmdogbed6a" path="res://scenes/tabs.tscn" id="2_uf588"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdioh"]
+bg_color = Color(0.0732, 0.07554, 0.12, 1)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_uf588"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mdioh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.05
+theme_override_styles/panel = SubResource("StyleBoxFlat_mdioh")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="left-panel" type="Panel" parent="Panel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="tabs" parent="Panel/VBoxContainer/HSplitContainer/left-panel" instance=ExtResource("2_uf588")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="DISPLAY" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="0"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="INPUT_AND_OUTPUTS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="1"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="APPS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="2"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="UPDATES" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="3"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="PERSONALIZATION" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="4"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="USERS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="5"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="LANGUAGE_AND_LOCALS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="6"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="NETWORK_AND_CONNECTIONS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="7"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="POWER_SETTINGS" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="ABOUT" parent="Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_uf588")
+
+[node name="right-panel" type="Panel" parent="Panel/VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[editable path="Panel/VBoxContainer/HSplitContainer/left-panel/tabs"]
