@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxhjmdogbed6a"]
+[gd_scene load_steps=13 format=3 uid="uid://dxhjmdogbed6a"]
 
 [ext_resource type="ButtonGroup" uid="uid://bug3geelul8vv" path="res://btn-groups/tabs.tres" id="1_tmpr7"]
 [ext_resource type="Texture2D" uid="uid://d0kwgh7fpgmj5" path="res://monitor.png" id="2_gbblg"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://djqjb0wi6ptyd" path="res://language.png" id="8_w2tqf"]
 [ext_resource type="Texture2D" uid="uid://dhfeiuq3m274e" path="res://network.png" id="9_3f1e3"]
 [ext_resource type="Texture2D" uid="uid://dkudmft38obeu" path="res://logos-and-icons/preferences-system-power-management.svg" id="10_krva6"]
+[ext_resource type="Texture2D" uid="uid://drlj3jijayf2t" path="res://logos-and-icons/play-circle.svg" id="11_w2tqf"]
 [ext_resource type="Texture2D" uid="uid://c2cdp3dadqbad" path="res://about.png" id="11_xx40h"]
 
 [node name="tabs" type="VBoxContainer"]
@@ -90,6 +91,14 @@ toggle_mode = true
 button_group = ExtResource("1_tmpr7")
 text = "Power Settings"
 icon = ExtResource("10_krva6")
+
+[node name="STARTUP-AND-LOCKSCREEN" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_tmpr7")
+text = "STARTUP AND LOCKSCREEN"
+icon = ExtResource("11_w2tqf")
 
 [node name="ABOUT" type="Button" parent="."]
 unique_name_in_owner = true

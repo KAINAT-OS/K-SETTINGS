@@ -100,3 +100,35 @@ func _on_btn_nvidiasettings_pressed() -> void:
 
 func _on_fullsettings_pressed() -> void:
 	OS.execute("systemsettings",[])
+
+
+func _on_appscenter_pressed() -> void:
+	OS.execute("plasma-discover",[])
+
+
+func _on_loginscreen_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_sddm"])
+
+
+func _on_backgroundservices_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_kded"])
+
+
+func _on_lockscreen_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_screenlocker"])
+
+
+func _on_desktopsession_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_smserver"])
+
+
+func _on_managefonts_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_fontinst"]) #
+
+
+func _on_wifi_pressed() -> void:
+	OS.execute("plasmawindowed",["org.kde.plasma.networkmanagement"]) # plasmawindowed org.kde.plasma.networkmanagement
+
+
+func _on_notifications_pressed() -> void:
+	OS.execute("kcmshell5",["kcm_notifications"]) # # kcm_notifications

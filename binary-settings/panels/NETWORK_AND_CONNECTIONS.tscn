@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl1ij66rdlptu"]
+[gd_scene load_steps=7 format=3 uid="uid://dl1ij66rdlptu"]
 
 [ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_soy20"]
 [ext_resource type="Texture2D" uid="uid://dhfeiuq3m274e" path="res://network.png" id="2_1f2fv"]
 [ext_resource type="Texture2D" uid="uid://ckqm8n1xn46ns" path="res://proxy.png" id="3_aiof8"]
+[ext_resource type="Texture2D" uid="uid://cubmi6ewptu20" path="res://logos-and-icons/wifi.svg" id="3_nh25d"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_soy20"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -59,7 +62,10 @@ button_group = SubResource("ButtonGroup_h4w2g")
 [node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
-[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+[node name="STARTUP-AND-LOCKSCREEN" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_soy20")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="10"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]
@@ -101,6 +107,14 @@ alignment = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
+[node name="wifi" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+text = "Wifi connecations"
+icon = ExtResource("3_nh25d")
+alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
 [node name="Connections2" type="Button" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer"]
 layout_mode = 2
 text = "Proxy
@@ -110,6 +124,7 @@ alignment = 0
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/Connections" to="Control" method="_on_connections_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/wifi" to="Control" method="_on_wifi_pressed"]
 [connection signal="pressed" from="Control/Panel/VBoxContainer/HSplitContainer/right-panel/MarginContainer/Control/VBoxContainer/Connections2" to="Control" method="_on_connections_2_pressed"]
 
 [editable path="Control"]

@@ -1,9 +1,9 @@
+VBoxContainer
 Button
+Control
 MarginContainer
 RichTextLabel
 HBoxContainer
-VBoxContainer
-Control
 TabContainer
 ColorRect
 Label

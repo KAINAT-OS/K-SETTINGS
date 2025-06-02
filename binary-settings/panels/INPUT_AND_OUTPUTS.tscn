@@ -195,8 +195,11 @@ alignment = 0
 [node name="razer" type="Button" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox/mouse/gaming-mouse/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/icon_normal_color = Color(0, 1, 0, 1)
 text = "Razer Gaming Mouse Settings"
+icon = ExtResource("3_vdcqi")
 alignment = 0
+autowrap_mode = 3
 
 [node name="keyboard and others" type="VBoxContainer" parent="Panel/VBoxContainer/HSplitContainer/right-panel/TabContainer/input devices/vbox"]
 layout_mode = 2

@@ -28,6 +28,7 @@ config/icon="uid://l5ixaki8qupn"
 
 window/size/viewport_width=800
 window/size/viewport_height=600
+window/energy_saving/keep_screen_on=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 window/vsync/vsync_mode=0
