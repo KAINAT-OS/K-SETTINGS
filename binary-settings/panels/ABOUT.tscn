@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dshvpl246o4jh"]
+[gd_scene load_steps=5 format=3 uid="uid://dshvpl246o4jh"]
 
 [ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_vl31b"]
 [ext_resource type="Script" uid="uid://dncy74fvxvtd2" path="res://panels/about_text.gd" id="2_06lu8"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_06lu8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -57,7 +59,10 @@ button_group = SubResource("ButtonGroup_h4w2g")
 [node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
-[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+[node name="STARTUP-AND-LOCKSCREEN" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_06lu8")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="10"]
 button_pressed = true
 button_group = SubResource("ButtonGroup_h4w2g")
 

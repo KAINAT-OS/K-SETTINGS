@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnepeunttit34"]
 
 [ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="2_fvcql"]
-[ext_resource type="Script" uid="uid://cb1nu3t8ji7x5" path="res://Display-control.gd" id="2_oiqyp"]
+[ext_resource type="Script" uid="uid://bevqlj2ghcxmm" path="res://Display-control.gd" id="2_oiqyp"]
 [ext_resource type="Script" uid="uid://c67jtsbqle46e" path="res://advance-display.gd" id="3_hss4f"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]

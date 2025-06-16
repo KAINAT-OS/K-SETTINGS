@@ -19,10 +19,10 @@ config/custom_user_dir_name="kainat-settingss"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/low_processor_mode=true
 run/low_processor_mode_sleep_usec=10000
+config/icon="uid://l5ixaki8qupn"
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="uid://l5ixaki8qupn"
 
 [display]
 
@@ -41,3 +41,4 @@ enabled=PackedStringArray("res://addons/markdownlabel/plugin.cfg")
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_s3tc_bptc=true

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cu3f3jrin2a72" path="res://preferences-desktop-color.svg" id="6_ec33m"]
 [ext_resource type="Texture2D" uid="uid://npsj5f2wpdkk" path="res://logos-and-icons/fontmanage.svg" id="6_syuyx"]
 [ext_resource type="Texture2D" uid="uid://bm3irbjj43pxc" path="res://logos-and-icons/KOS-tabber.svg" id="7_oaxlq"]
-[ext_resource type="Script" uid="uid://bqbm06w87hok7" path="res://kos_tabber.gd" id="8_lj4v3"]
+[ext_resource type="Script" uid="uid://bqbm06w87hok7" path="res://KOS_Tabber.gd" id="8_lj4v3"]
 [ext_resource type="Texture2D" uid="uid://dsrh4438ugb61" path="res://logos-and-icons/KOS-mc.svg" id="9_c11ly"]
 [ext_resource type="Script" uid="uid://blwu5hn6kv6pg" path="res://kos_mc.gd" id="10_2pcd1"]
 [ext_resource type="Texture2D" uid="uid://dk2rfmpaiu3uv" path="res://logos-and-icons/dos10.svg" id="11_ocbua"]
