@@ -1,32 +1,39 @@
 name: Checkout and Transfer Files
 
-on: [push]
+on:
+  push:
+    branches:
+      - arm64
 
 jobs:
   checkout-transfer:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout current repository
+      - name: Checkout current repository (arm64 branch)
         uses: actions/checkout@v3
+        with:
+          ref: arm64
 
-      - name: Checkout another repository (Kainatos-packages)
+      - name: Checkout another repository (Kainatos-packages, arm64 branch)
         uses: actions/checkout@v3
         with:
           repository: KAINAT-OS/Kainatos-packages
           token: ${{ secrets.GH_TOKEN }}
+          ref: arm64
           path: kainatos-packages
 
       - name: Copy the binary-settings/Builds/linux/K-settings folder to sources folder
         run: |
           cp -r binary-settings/Builds/linux/* kainatos-packages/sources/
 
-      - name: Commit and push changes
+      - name: Commit and push changes to arm64 branch
         working-directory: kainatos-packages
         run: |
-          sudo apt-get install git-lfs
+          sudo apt-get update
+          sudo apt-get install -y git-lfs
           git config --global user.email "kainatquaderee@users.noreply.github.com"
           git config --global user.name "kainatquaderee"
           git lfs install
           git add .
           git commit -m 'Sync from K-SETTINGS'
-          git push origin main
+          git push origin arm64
