@@ -21,7 +21,8 @@ func _on_toggled(toggled_on: bool) -> void:
 	var write_cmd := "kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key SingleClick " + value_str
 	
 	OS.execute("bash", ["-c", write_cmd],[],false)   
-	OS.execute("bash",["-c","killall plasmashell"])       # :contentReference[oaicite:1]{index=1}
+	OS.execute("bash",["-c","killall plasmashell"])
+	await get_tree().create_timer(.2).timeout       # :contentReference[oaicite:1]{index=1}
 	OS.execute("bash",["-c", "nohup kstart5 plasmashell >/dev/null 2>&1 &"])  # :contentReference[oaicite:2]{index=2}
 	# 3) Restart Plasma so the new setting takes effect immediately
 	#var restart_cmd := "plasmashell --replace"

@@ -2,6 +2,6 @@ extends Button
 
 
 func _on_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_joystick"])
+	OS.create_process("kcmshell5",["kcm_joystick"])
 	
 	

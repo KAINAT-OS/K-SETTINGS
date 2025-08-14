@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2ypelmsiugp8"]
+[gd_scene load_steps=10 format=3 uid="uid://b2ypelmsiugp8"]
 
 [ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_lggxw"]
 [ext_resource type="Texture2D" uid="uid://b1kakg0romvkq" path="res://logos-and-icons/star-large-symbolic.svg" id="3_hc78r"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://kwkvyr30g1ob" path="res://logos-and-icons/shopping-bag.svg" id="7_hc78r"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_hc78r"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -63,7 +65,10 @@ button_group = SubResource("ButtonGroup_h4w2g")
 [node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
-[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+[node name="STARTUP-AND-LOCKSCREEN" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_hc78r")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="10"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]

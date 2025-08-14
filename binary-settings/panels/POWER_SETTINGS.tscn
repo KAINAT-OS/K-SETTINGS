@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://det6eal188afb"]
+[gd_scene load_steps=8 format=3 uid="uid://det6eal188afb"]
 
 [ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_jdtml"]
 [ext_resource type="ButtonGroup" uid="uid://brhgx3wrnk6jb" path="res://main-bg.tres" id="2_jmg4b"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dun7r75bldagg" path="res://logos-and-icons/application-menu.svg" id="5_ainmo"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_jdtml"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -61,7 +63,10 @@ button_group = SubResource("ButtonGroup_h4w2g")
 button_pressed = true
 button_group = SubResource("ButtonGroup_h4w2g")
 
-[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+[node name="STARTUP-AND-LOCKSCREEN" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_jdtml")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="10"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]

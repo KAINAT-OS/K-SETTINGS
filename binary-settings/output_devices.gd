@@ -11,12 +11,12 @@ func _ready() -> void:
 	btn_kde_connect.connect("pressed",Callable(self,"btn_kde_connect_on_pressed"))
 
 func btn_printer_on_pressed():
-	var result = OS.execute("kcmshell5",["kcm_printer_manager"],[],true)
+	var result = OS.create_process("kcmshell5",["kcm_printer_manager"])
 
 
 func btn_audio_on_pressed():
-	var result = OS.execute("kcmshell5",["kcm_pulseaudio"],[],true)
+	var result = OS.create_process("kcmshell5",["kcm_pulseaudio"])
 
 
 func btn_kde_connect_on_pressed():
-	var result = OS.execute("kcmshell5",["kcm_kdeconnect"],[],true)
+	var result = OS.create_process("kcmshell5",["kcm_kdeconnect"])

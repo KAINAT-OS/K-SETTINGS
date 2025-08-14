@@ -17,7 +17,7 @@ func _ready():
 		if btn is Button:
 			print(btn.name)
 			btn.pressed.connect(Callable(self,"_change_panel").bind(btn.name))
-	var nvidiacheck=OS.execute("bash",["-c","dpkg -s nvidia-driver-kainatos > /dev/null 2>&1"])
+	var nvidiacheck=OS.execute("bash",["-c","nvidia-smi > /dev/null 2>&1"])
 	if nvidiacheck == 0:
 		%"btn_nvidia-settings".show()
 	else:
@@ -42,43 +42,43 @@ func _change_panel(panel) ->void:
 
 
 func _on_btn_users_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_users"])
+	OS.execute_with_pipe("bash",["-c","kcmshell5 kcm_users >/dev/null 2>&1"])
 
 
 func _on_btn_accounts_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_kaccounts"])
+	OS.execute_with_pipe("bash",["-c","kcmshell5 kcm_kaccounts >/dev/null 2>&1"])
 
 
 func _on_btn_kde_wallet_pressed() -> void:
-	OS.execute("kwalletmanager5",[])
+	OS.create_process("kwalletmanager5",[])
 
 
 func _on_connections_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_networkmanagement"])
+	OS.create_process("kcmshell5",["kcm_networkmanagement"])
 
 
 func _on_connections_2_pressed() -> void:
-	OS.execute("kcmshell5",["proxy"])
+	OS.create_process("kcmshell5",["proxy"])
 
 
 func _on_autostart_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_autostart"])
+	OS.create_process("kcmshell5",["kcm_autostart"])
 
 
 func _on_manageapps_pressed() -> void:
-	OS.execute("bash",["-c","plasma-discover --mode Installed"])
+	OS.create_process("bash",["-c","plasma-discover --mode Installed"])
 
 
 func _on_btn_power_saving_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_powerdevilprofilesconfig"])
+	OS.create_process("kcmshell5",["kcm_powerdevilprofilesconfig"])
 
 
 func _on_btn_activity_power_settings_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_powerdevilactivitiesconfig"])
+	OS.create_process("kcmshell5",["kcm_powerdevilactivitiesconfig"])
 
 
 func _on_btn_advanced_power_settigns_pressed() -> void:
-	OS.execute("kcmshell5", ["kcm_powerdevilglobalconfig"])
+	OS.create_process("kcmshell5", ["kcm_powerdevilglobalconfig"])
 	
 	
 	
@@ -87,48 +87,48 @@ func _on_btn_advanced_power_settigns_pressed() -> void:
 
 
 func _on_btn_fullabout_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_about-distro"])
+	OS.create_process("kcmshell5",["kcm_about-distro"])
 
 
 func _on_piper_pressed() -> void:
-	OS.execute("piper",[])
+	OS.create_process("piper",[])
 
 
 func _on_btn_nvidiasettings_pressed() -> void:
-	OS.execute("nvidia-settings",[])
+	OS.create_process("nvidia-settings",[])
 
 
 func _on_fullsettings_pressed() -> void:
-	OS.execute("systemsettings",[])
+	OS.create_process("systemsettings",[])
 
 
 func _on_appscenter_pressed() -> void:
-	OS.execute("plasma-discover",[])
+	OS.create_process("plasma-discover",[])
 
 
 func _on_loginscreen_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_sddm"])
+	OS.create_process("kcmshell5",["kcm_sddm"])
 
 
 func _on_backgroundservices_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_kded"])
+	OS.create_process("kcmshell5",["kcm_kded"])
 
 
 func _on_lockscreen_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_screenlocker"])
+	OS.create_process("kcmshell5",["kcm_screenlocker"])
 
 
 func _on_desktopsession_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_smserver"])
+	OS.create_process("kcmshell5",["kcm_smserver"])
 
 
 func _on_managefonts_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_fontinst"]) #
+	OS.create_process("kcmshell5",["kcm_fontinst"]) #
 
 
 func _on_wifi_pressed() -> void:
-	OS.execute("plasmawindowed",["org.kde.plasma.networkmanagement"]) # plasmawindowed org.kde.plasma.networkmanagement
+	OS.create_process("plasmawindowed",["org.kde.plasma.networkmanagement"]) # plasmawindowed org.kde.plasma.networkmanagement
 
 
 func _on_notifications_pressed() -> void:
-	OS.execute("kcmshell5",["kcm_notifications"]) # # kcm_notifications
+	OS.create_process("kcmshell5",["kcm_notifications"]) # # kcm_notifications

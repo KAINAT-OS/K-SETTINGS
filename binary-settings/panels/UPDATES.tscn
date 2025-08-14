@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxc6ylineo3bl"]
+[gd_scene load_steps=7 format=3 uid="uid://dxc6ylineo3bl"]
 
 [ext_resource type="PackedScene" uid="uid://d2dtf22jre3an" path="res://panels/new-settings-app.tscn" id="1_w6ypi"]
 [ext_resource type="Script" uid="uid://coqxuo2b737jf" path="res://check_for_update.gd" id="2_ybw1t"]
 [ext_resource type="Script" uid="uid://c68ujqeqq2xhs" path="res://panels/update_settings.gd" id="3_lw8kt"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_h4w2g"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_w6ypi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bpp5"]
 bg_color = Color(0.3843, 0.396585, 0.63, 1)
@@ -62,7 +64,10 @@ button_group = SubResource("ButtonGroup_h4w2g")
 [node name="POWER_SETTINGS" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="8"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
-[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+[node name="STARTUP-AND-LOCKSCREEN" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="9"]
+button_group = SubResource("ButtonGroup_w6ypi")
+
+[node name="ABOUT" parent="Control/Panel/VBoxContainer/HSplitContainer/left-panel/tabs" index="10"]
 button_group = SubResource("ButtonGroup_h4w2g")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/Panel/VBoxContainer/HSplitContainer/right-panel" index="0"]

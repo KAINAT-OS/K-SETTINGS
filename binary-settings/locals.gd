@@ -10,17 +10,17 @@ func _ready() -> void:
 	
 	
 func on_btn_region_and_language_pressed() ->void :
-	OS.execute("kcmshell5",["kcm_regionandlang"])
+	OS.create_process("kcmshell5",["kcm_regionandlang"])
 	
 	
 func on_btn_spell_checking_pressed() -> void:
-		OS.execute("kcmshell5",["kcmspellchecking"])
+		OS.create_process("kcmshell5",["kcmspellchecking"])
 	
 	
 func on_btn_date_and_time_pressed() -> void:
-		OS.execute("kcmshell5",["kcm_clock"])
+		OS.create_process("kcmshell5",["kcm_clock"])
 
 
 
 func _on_btn_add_language_pressed() -> void:
-	OS.execute("ibus-setup",[])
+	OS.create_process("ibus-setup",[])
